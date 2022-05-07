@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .tabs{
+      border-right: solid;
+      border-left: solid;
+      border-top: solid;
+      border-width: 0.5px;
+      display: grid;
+      /* height: 70px; */
+      grid-template-columns: auto auto auto;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .tab{
+      width: 100%;
+      /* margin: auto; */
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .tab h1:hover{
+      text-decoration: underline;
+    }
+    .tab h1 {
+      font-size: 26px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #tab1, #tab2{
+      border-right: solid;
+      border-width: 0.5px;
+    }
+
+    #posts-scroll{
+      height: 600px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .post-container{
+      display: grid;
+      grid-template-columns: 20% 50% 30%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    div[name=eb]{
+      display:grid;
+    }
+    div[name=ext]{
+      display:grid;
+    }
+    .post-title-eb{
+      font-family: Avenir;
+      font-size: 12px;
+      margin: 0;
+    }
+    .post-date{
+      font-family: Avenir;
+      font-size: 15px;
+      color: #747474;
+    }
+    .post-title{
+      font-family: Georgia;
+      font-size: 26px;
+    }
+    .post-title:hover{
+      text-decoration: underline;
+    }
+    .post-about{
+      font-family: Georgia;
+      font-size: 16px;
+      margin: 0;
+      line-height: 19px;
+    }
+    .post-info-container{
+      padding-right: 90px;
+    }
+    .post-by{
+      font-family: Avenir;
+      font-size: 14px;
+      margin: 0;
+      color: #747474;
+    }
+    .wrapper{
+      padding: 1em 0 1em 0;
+    }
+    .article-link{
+      border-bottom: none;
+      font-style: inherit;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .post-img{
+      width: 250px;
+      height: 159px;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 680px) {
+      .tab h1{
+        font-size: 20px;
+      }
+      .post-title{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .post-container{
+        grid-template-columns: auto;
+      }
+      .post-info-container{
+        padding-right: 0px;
+      }
+      .post-title-eb{
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 470px) {
+      .tab h1{
+        font-size: 15px;
+      }
+      .post-about{
+        font-size: 14px;
+      }
+      .tab{
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      #br1{
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div class="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Hero -->
+        <section style="height: 150px;" id="hero" class="container nav-logo-alt">
+          <!-- <img src="images/logo_white.png" /> -->
+          <div style="position: absolute;">
+            <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
+              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;"/></a>
+              <!-- <div class="name"> --> 
+              <div id="gyneca-title-container">
+                <h1 id="gyneca-title">GYNECA</h1>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div  class="tagline" style="clear:both;">
+              <h1 id="gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="topnav" id="nav">
+      <div id="mobile-title-icon">
+        <img src="images/transparent_logo.png">
+        <h1 id="mobile-title">GYNECA</h1>
+      </div>
+      <a style="background-color: #f4f4f4;" href="index.html">Home </a>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn">About 
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="masthead.html">Masthead</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <a href="submissions.html">Submissions</a>
+      <a href="guidelines.html">Guidelines</a>
+      <a style="color: #523636;" class="active" href="blog.html">Blog</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
+  </nav>
+
+    <!-- Main -->
+    <div class="wrapper">
+      <div class="container" id="main">
+        <br id="br1">
+        <div class="tabs">
+          <!--show__(#sw, #pe, #nl)-->
+          <div class="tab" id="tab1" onclick="showSW(3, 2, 2)">
+            <h1>Staff Writing</h1>
+          </div>
+          <div class="tab" id="tab2" onclick="showPE(3, 2, 2)">
+            <h1>Past Events</h1>
+          </div>
+          <div class="tab" id="tab3" onclick="showNL(3, 2, 2)">
+            <h1>Newsletters</h1>
+          </div>
+        </div><hr style="margin-top: 0;">
+  
+        <div id="posts-scroll">
+
+          <div id="sw1">
+            <div class="post-container"> 
+              <p class="post-date">May 4, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title"><a class="article-link" href="blog-articles/staff-writing/do-periods-actually-sync.html">Do Periods Actually Sync?</a></h2>
+                <p class="post-about">
+                  “Pain shared is pain lessened,” people have always hypothesized — does the uterus yearn for such commisteration as well?
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/period-river-art.png"> <!--img dim: 440x280-->
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="sw2">
+            <div class="post-container"> 
+              <p class="post-date">May 4, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title"><a class="article-link" href="blog-articles/staff-writing/can-you-c-the-difference.html">Can you “C” the Difference?: A Comparison of C-section rates across NYC Boroughs</a></h2>
+                <p class="post-about">
+                  According to the World Health Organization, C-section rates worldwide have increased from approximately 7% in 1990 to about 21% currently.
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/C-section art.jpg"> <!--img dim: 440x280-->
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="sw3">
+            <div class="post-container"> 
+              <p class="post-date">May 4, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title"><a class="article-link" href="blog-articles/staff-writing/not-just-that-time.html">Not Just “That Time of the Month”: The Harmful Effects of Premenstrual Dysphoric Disorder</a></h2>
+                <p class="post-about">
+                  The lack of research on PMDD has very real and fatal effects. One of the most upsetting aspects is that such lack of research has translated to supporting beliefs that PMDD is not a real disorder and that it does not exist at all.
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> <!--img dim: 440x280-->
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <!--img dim: 440x280-->
+          <div id="pe1">
+            <div class="post-container"> 
+              <p class="post-date">April 4, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb"></p>
+                <h2 class="post-title"><a class="article-link" href="blog-articles/past-events/gynecaxplanned.html">GYNECA x Planned Parenthood</a></h2>
+                <p class="post-about">We hosted Madeleine Morales, Barnard 
+                  College senior and Mailman School of Public Health MPH 
+                  Candidate, to discuss her inspiring and impactful advocacy
+                  work with organization Period Equity to remove the tampon tax.
+                </p>
+                <!-- <p class="post-by">By Mary Boyce</p> -->
+              </div>
+              <img class="post-img" src="images/GYNECA x PP event pic (1).jpeg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="pe2">
+            <div class="post-container"> 
+              <p class="post-date">January 5, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb"></p>
+                <h2 class="post-title"><a class="article-link" href="blog-articles/past-events/want-to-be-OBGYN.html">"Want to be an Ob/Gyn? Conversation and Q&A with NYC
+                  Gynecologists"</a></h2>
+                <p class="post-about">On January 25th, the Outreach Committee of Columbia GYNECA hosted a Q&A panel featuring several accomplished Ob/Gyn physicians from the NYC area where students had the opportunity to ask questions about their careers in women’s health.
+                </p>
+                <!-- <p class="post-by">By Mary Boyce</p> -->
+              </div>
+              <img class="post-img" src="images/want-to-be-preview.png"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="nl1">
+            <div class="post-container"> 
+              <!-- <p class="post-date">January 2022</p> -->
+              <div class="post-info-container">
+                <h2 class="post-title"><a class="article-link" href="newsletters/2022/jan 2022 newletter (1).pdf">January 2022</a></h2>
+              </div>
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="nl2">
+            <div class="post-container"> 
+              <!-- <p class="post-date">May 2022</p> -->
+              <div class="post-info-container">
+                <h2 class="post-title"><a class="article-link" href="newsletters/2022/may 2022 newsletter (1).pdf">May 2022</a></h2>
+              </div>
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+
+<!-- 
+          <div id="sw2">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="nl1">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By Jane Doe</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="sw3">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="pe2">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By Doe Jane</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="sw4">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <p class="post-title-eb">THE EDITORIAL BOARD</p>
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By THE EDITORIAL BOARD</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div>
+
+          <div id="nl2">
+            <div class="post-container"> 
+              <p class="post-date">March 23, 2022</p>
+              <div class="post-info-container">
+                <h2 class="post-title">Blog Post Title: Gyneca launches New Website </h2>
+                <p class="post-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Praesent mauris mauris, fermentum maximus tincidunt pretium.
+                </p>
+                <p class="post-by">By John Jacob</p>
+              </div>
+              <img class="post-img" src="images/pic03.jpg"> 
+            </div>
+            <div style="background-color:black;height:0.5px;"></div>
+          </div> -->
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- Footer -->
+    <div id="f">
+      <div id="f-content">
+        <div id="f-icon-title">
+          <img src="images/transparent_logo.png">
+          <h1>GYNECA</h1>
+        </div>
+        <div id="f-sm">
+          <ul class="icons footer-ul"> 
+            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+          </ul>
+          <ul class="icons footer-ul"> 
+            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/dynamicnav.js"></script>
+
+</body>
+
+</html>
