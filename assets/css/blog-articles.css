@@ -1,0 +1,87 @@
+.page-heading{
+    text-align: center;
+    /* margin: 55px; */
+    padding: 0 15% 0 15%;
+    /* width: 300px; */
+}
+.page-heading h4{
+    margin-top: 60px;
+    color: #922e22;
+    font-size: 25px;
+}
+.page-heading h1{
+    font-size: 44px;
+    margin-top: 10px;
+    color: black;
+    line-height: 50px;
+    font-weight: 500;
+    /* width: 100%; */
+}
+.page-heading h2{
+    font-family: Avenir;
+    font-size: 20px;
+    margin-top: 20px;
+    color: black;
+}
+.page-heading h3 {
+    font-family: Avenir;
+    font-size: 15px;
+    color: #747474;
+    margin-bottom: 60px;
+}
+.article-container {
+    margin: 0 17% 0 17%;
+}
+.content p{
+    /* text-align: justify; */
+    font-size: 23px;
+    /* margin-left: 30px; */
+    line-height: 39px;
+    color: black;
+}
+.content .refs{
+    /* text-align: justify; */
+    font-size: 20px;
+    /* margin-left: 30px; */
+    line-height: 39px;
+}
+
+@media screen and (max-width: 1000px) {
+    .article-container {
+        margin: 0 5% 0 5%;
+    }
+}
+@media screen and (max-width: 695px) {
+    .page-heading h1{
+        font-size: 31px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .content p{
+        font-size: 18px;
+        line-height: 33px;
+    }
+    .content .refs{
+        font-size: 16px;
+    }
+    .page-heading h4{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .page-heading h1{
+        font-size: 29px;
+        line-height: 25px;
+    }
+    .page-heading h2{
+        font-size: 16px;
+    }
+    .page-heading h3{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .page-heading h1{
+        font-size: 25px;
+    }
+}
