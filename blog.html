@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Telephasic by HTML5 UP
 	html5up.net | @ajlkn
@@ -53,6 +53,10 @@
       padding-top: 20px;
       padding-bottom: 20px;
     }
+    .nl-container{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     div[name=eb]{
       display:grid;
     }
@@ -72,6 +76,7 @@
     .post-title{
       font-family: Georgia;
       font-size: 26px;
+      margin-bottom: 7px;
     }
     .post-title:hover{
       text-decoration: underline;
@@ -79,7 +84,7 @@
     .post-about{
       font-family: Georgia;
       font-size: 16px;
-      margin: 0;
+      margin-bottom: 6px;
       line-height: 19px;
     }
     .post-info-container{
@@ -106,6 +111,9 @@
       object-fit: cover;
     }
     @media screen and (max-width: 680px) {
+      .hide-on-shrink{
+        display: none;
+      }
       .tab h1{
         font-size: 20px;
       }
@@ -222,7 +230,7 @@
                 <p class="post-about">
                   “Pain shared is pain lessened,” people have always hypothesized — does the uterus yearn for such commisteration as well?
                 </p>
-                <p class="post-by">By THE EDITORIAL BOARD</p>
+                <p class="post-by">By Priya Ray</p>
               </div>
               <img class="post-img" src="images/period-river-art.png"> <!--img dim: 440x280-->
             </div>
@@ -238,7 +246,7 @@
                 <p class="post-about">
                   According to the World Health Organization, C-section rates worldwide have increased from approximately 7% in 1990 to about 21% currently.
                 </p>
-                <p class="post-by">By THE EDITORIAL BOARD</p>
+                <p class="post-by">By Isabella Bernstein</p>
               </div>
               <img class="post-img" src="images/C-section art.jpg"> <!--img dim: 440x280-->
             </div>
@@ -254,9 +262,9 @@
                 <p class="post-about">
                   The lack of research on PMDD has very real and fatal effects. One of the most upsetting aspects is that such lack of research has translated to supporting beliefs that PMDD is not a real disorder and that it does not exist at all.
                 </p>
-                <p class="post-by">By THE EDITORIAL BOARD</p>
+                <p class="post-by">By Elaje Aminololama Lopez</p>
               </div>
-              <img class="post-img" src="images/pic03.jpg"> <!--img dim: 440x280-->
+              <div class="hide-on-shrink" style="width: 250px;height:159px;background-color: white;"></div>
             </div>
             <div style="background-color:black;height:0.5px;"></div>
           </div>
@@ -297,20 +305,22 @@
           </div>
 
           <div id="nl1">
-            <div class="post-container"> 
+            <div class="nl-container"> 
               <!-- <p class="post-date">January 2022</p> -->
               <div class="post-info-container">
-                <h2 class="post-title"><a class="article-link" href="newsletters/2022/jan 2022 newletter (1).pdf">January 2022</a></h2>
+                <h2 class="post-title"><a class="article-link" rel="noreferrer noopener" 
+                  target="_blank" href="blog-articles/newsletters/2022/jan2022.html">January 2022</a></h2>
               </div>
             </div>
             <div style="background-color:black;height:0.5px;"></div>
           </div>
 
           <div id="nl2">
-            <div class="post-container"> 
+            <div class="nl-container"> 
               <!-- <p class="post-date">May 2022</p> -->
               <div class="post-info-container">
-                <h2 class="post-title"><a class="article-link" href="newsletters/2022/may 2022 newsletter (1).pdf">May 2022</a></h2>
+                <h2 class="post-title"><a class="article-link" rel="noreferrer noopener" 
+                  target="_blank" href="blog-articles/newsletters/2022/may2022.html">May 2022</a></h2>
               </div>
             </div>
             <div style="background-color:black;height:0.5px;"></div>
