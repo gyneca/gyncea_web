@@ -933,11 +933,15 @@ body{
 	}
 	#mobile-title-icon{
 		position: fixed;
-		left: 35%;
+		text-align: center;
 		top: 0;
+		left: 33%;
 		display: inline-flex;
 		width: fit-content;
 		justify-content: center;
+	}
+	#mobile-title-icon a, #mobile-title-icon #mobile-title, #mobile-title-icon img{
+		display: inherit;
 	}
 	#mobile-title-icon img{
 		width: 17px;
