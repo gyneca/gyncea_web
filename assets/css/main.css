@@ -883,6 +883,9 @@ body{
 	/* .topnav.responsive {
 		position: relative;
 	} */
+	nav {
+		overflow:auto;
+	}
 	.topnav.responsive .nav-icon {
 	  position: absolute;
 	  right: 0;
