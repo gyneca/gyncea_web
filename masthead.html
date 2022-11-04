@@ -16,107 +16,124 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
   <style>
-    .grid-container-eb-head{
+    .grid-container-eb-head {
       display: grid;
       grid-template-columns: 50% 50%;
       text-align: center;
       justify-content: center;
     }
 
-    .grid-container-eb-head p{
+    .grid-container-eb-head p {
       width: 450px;
       font-size: 17px;
       margin: auto;
       text-align: justify;
     }
-    .grid-container-eb-head h3, .grid-container-eb-head h4{
+
+    .grid-container-eb-head h3,
+    .grid-container-eb-head h4 {
       font-style: italic;
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-    .grid-container-com{
+    .grid-container-com {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       text-align: center;
       justify-content: center;
     }
-    .grid-container-com img{
+
+    .grid-container-com img {
       border-radius: 50%;
     }
-    .grid-container-com h4{
+
+    .grid-container-com h4 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: bold;
       font-size: 22px;
     }
-    .grid-container-com h5{
+
+    .grid-container-com h5 {
       font-family: Avenir;
     }
-    .grid-item{
+
+    .grid-item {
       padding: 15px;
     }
 
-    .mh-heading-wrapper{
+    .mh-heading-wrapper {
       width: 100%;
       height: 150px;
       justify-content: center;
       align-items: center;
       display: flex;
     }
-    .mh-heading-wrapper h2{
+
+    .mh-heading-wrapper h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 60px;
     }
 
-    .eb-bio{
+    .eb-bio {
       font-family: Avenir;
     }
 
     @media screen and (max-width: 1131px) {
-      .grid-container-eb-head{
+      .grid-container-eb-head {
         grid-template-columns: auto;
       }
-      .grid-container-com{
+
+      .grid-container-com {
         grid-template-columns: auto auto auto;
       }
 
     }
 
     @media screen and (max-width: 813px) {
-      .grid-container-com{
+      .grid-container-com {
         grid-template-columns: auto auto;
       }
-      .mh-heading-wrapper{
+
+      .mh-heading-wrapper {
         height: 100px;
       }
-      .mh-heading-wrapper h2{
+
+      .mh-heading-wrapper h2 {
         font-size: 40px;
       }
     }
 
-    @media screen and (max-width: 564px){
-      .grid-container-eb-head .grid-item img, .grid-container-eb-head p{
+    @media screen and (max-width: 564px) {
+
+      .grid-container-eb-head .grid-item img,
+      .grid-container-eb-head p {
         width: 300px;
       }
-      .grid-container-eb-head p{
+
+      .grid-container-eb-head p {
         font-size: 13px;
       }
-      .grid-container-com img{
+
+      .grid-container-com img {
         width: 150px;
       }
-      .grid-container-com h4{
+
+      .grid-container-com h4 {
         font-size: 17px;
       }
-      .grid-container-com h5{
+
+      .grid-container-com h5 {
         font-size: 13px;
       }
-      .mh-heading-wrapper h2{
+
+      .mh-heading-wrapper h2 {
         font-size: 30px;
       }
-      .fac h3{
+
+      .fac h3 {
         font-size: 17px;
       }
     }
-
   </style>
 </head>
 
@@ -132,14 +149,14 @@
           <!-- <img src="images/logo_white.png" /> -->
           <div style="position: absolute;">
             <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
-              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;"/></a>
-              <!-- <div class="name"> --> 
+              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;" /></a>
+              <!-- <div class="name"> -->
               <div id="gyneca-title-container">
                 <h1 id="gyneca-title">GYNECA</h1>
               </div>
               <!-- </div> -->
             </div>
-            <div  class="tagline" style="clear:both;">
+            <div class="tagline" style="clear:both;">
               <h1 id="gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h1>
             </div>
           </div>
@@ -155,33 +172,35 @@
           <h1 id="mobile-title">GYNECA</h1>
         </a>
       </div>
-    <a style="background-color: #f4f4f4;" href="index.html">Home</a>
-    <div onclick="" class="dropdown">
-      <a style="color: #523636;" class="dropbtn">About 
-        <!-- <i class="fa fa-caret-down"></i> -->
-      </a>
-      <div class="dropdown-content">
-        <a href="about.html">About</a>
-        <a href="masthead.html">Masthead</a>
-        <a href="faq.html">FAQs</a>
+      <a style="background-color: #f4f4f4;" href="index.html">Home</a>
+      <div onclick="" class="dropdown">
+        <a style="color: #523636;" class="dropbtn">About
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="masthead.html">Masthead</a>
+          <a href="faq.html">FAQs</a>
+        </div>
       </div>
-    </div>
-    <a href="submissions.html">Submissions</a>
-    <a href="guidelines.html">Guidelines</a>
-    <a href="blog.html">Blog</a>
-    <div onclick="" class="dropdown">
-      <a class="dropbtn">Join
-        <!-- <i class="fa fa-caret-down"></i> -->
-      </a>
-      <div class="dropdown-content">
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
-          Roles and Responsibilities
+      <a href="submissions.html">Submissions</a>
+      <a href="guidelines.html">Guidelines</a>
+      <a href="blog.html">Blog</a>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn">Join
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
+            Roles and Responsibilities
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
             Become a Peer Reviewer
           </a>
-        <!--for applications sub tabs-->
-        <!-- <div class="sub-dropdown">
+          <!--for applications sub tabs-->
+          <!-- <div class="sub-dropdown">
           <a target="_blank" rel="noopener noreferrer" href="join.html">
             Applications
           </a>
@@ -194,11 +213,11 @@
             </a>
           </div>
         </div> -->
+        </div>
       </div>
-    </div>
-    <a href="contact.html">Contact</a>
-    <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
-  </nav>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
+    </nav>
 
 
     <!-- Main -->
@@ -214,102 +233,79 @@
             <img src="images/anisha-prakash.jpeg">
             <h3>Anisha Prakash</h3>
             <h4>Co-Editor in chief, Founder</h4>
-              <p class="eb-bio">Anisha Prakash is a junior at Barnard College of 
-                Columbia University, pursuing a Women's, Gender, and Sexuality
-                studies with a Chemistry minor. Last summer, she worked as a 
-                Summer Undergraduate Research Fellow at the Dietrich Lab at 
-                Columbia, conducting microbiology and genetics research on 
-                Pseudomonas aeruginosa, a bacteria that causes infections in 
-                people with cystic fibrosis and burn wounds. Having studied 
-                feminist theory and experiencing the struggles of being a 
-                woman in science, she is passionate about fighting the gender 
-                disparities in medicine on both a scientific and social level. 
-                She’s excited to work with Gyneca’s talented team to publish 
-                its first issue.
-              </p>
+            <p class="eb-bio">Anisha Prakash is a junior at Barnard College of Columbia University, pursuing a major in
+              Women's, Gender, and Sexuality studies and Chemistry. She chose to start Gyneca because she saw an issue
+              that was not reflected in the journals already on campus. It was a product of dealing with personal
+              struggles with health, reading Elinor Cleghorn's Unwell Woman, taking WGS classes related to health, being
+              a woman in STEM, and conducting research as an undergraduate. She is passionate about fighting the gender
+              disparities in medicine on both a scientific and social level, and cares deeply about how the world
+              disregards women's health. She’s thrilled to work with Gyneca’s talented team to publish its first issue.
+              Besides Gyneca, she also works as a research assistant at the Glendinning Lab at Barnard, works as a
+              teaching assistant, and is the vice president of Club Zamana.
+            </p>
           </div>
           <div class="grid-item">
             <img src="images/ashley-liang.png">
             <h3>Ashley Liang</h3>
             <h4>Co-Editor in chief</h4>
-            <p class="eb-bio">Ashley Liang is a junior at Columbia University studying
-              Biochemistry. She oversees the Web Development department of
-              GYNECA. As an aspiring female scientist currently pursuing
-              research at the Sternberg Lab in Columbia’s Medical Center 
-              campus, women’s health is directly at the center of her 
-              academic and social interests. At GYNECA, she hopes to not only
-              help showcase other undergraduate researchers, but also foster
-              a community in which knowledge of women’s health is both 
-              expanded and celebrated. Outside of her educational pursuits,
-              she enjoys golfing and watching The Great British Bake Off.</p>
+            <p class="eb-bio">Ashley Liang is a junior at Columbia College majoring in Biochemistry. She worked in the
+              Sternberg Lab at Columbia University’s Medical Center as a Summer Undergraduate Research Fellow, and is
+              continuing her research on CRISPR-transposon systems this semester. As an aspiring scientist, women’s
+              health is a topic that lies directly at the intersection of her academic and social interests. At GYNECA,
+              she hopes to not only help showcase other undergraduate researchers, but also foster a community in which
+              women’s health research is expanded and celebrated. She is eager to grow GYNECA’s membership and help
+              establish a place on campus where productive discussions about women’s health issues can take place. </p>
           </div>
           <div class="grid-item">
             <img src="images/Ananya_Raghavan.png">
             <h3>Ananya Raghavan</h3>
             <h4>Managing Editor</h4>
-            <p class="eb-bio">Ananya Raghavan is a sophomore in Columbia University's School of
-              Engineering and Applied Science (SEAS). She oversees Art and the
-              Social Media departments of GYNECA. She hopes to major in 
-              biomedical engineering on the premed track, minoring in Middle 
-              Eastern and South Asian studies. She is very interested in the 
-              intersection between medicine, art, and gender studies and hopes 
-              to explore these areas more with GYNECA. In her free time, she 
-              can be found painting, playing with her golden doodle, Copper, 
-              or curled up with a good book/Netflix bollywood film.</p>
+            <p class="eb-bio">Ananya Raghavan is a sophomore in Columbia University's School of Engineering and Applied
+              Science (SEAS). She is majoring in biomedical engineering and worked in the Carol Prives Lab as a Summer
+              Undergraduate Research Fellow (SURF). She is very excited to be a part of GYNECA and is overseeing the
+              journalism, editing, and national submission committees. In her free time, she loves running, painting,
+              and playing with her goldendoodle, Copper. On most Sundays she's usually watching a feminist, thriller, or
+              romantic Bollywood movie.</p>
           </div>
           <div class="grid-item">
             <img src="images/nicole-greco.png">
             <h3>Nicole Greco</h3>
             <h4>Managing Editor</h4>
-            <p class="eb-bio">Tara Samsel is a senior studying Molecular and Cellular Biology 
-              at Barnard College of Columbia University on the pre-medical 
+            <p class="eb-bio">Tara Samsel is a senior studying Molecular and Cellular Biology
+              at Barnard College of Columbia University on the pre-medical
               track. She oversees the Revision Editing and
               Journalism departments of GYNECA. She is currently training to be
               an Emergency Medical Technician at Columbia University’s volunteer
-               EMS program, CUEMS.
-               She is an Undergraduate Research Fellow at Columbia University 
-               Fertility Center conducting her own independent project in Dr. 
-               Zev William’s embryology lab introducing automated liquid 
-               handling. Attending a historically women’s college, working in 
-               the medical field, and conducting a fertility research project 
-               has fueled her interest in women’s health and prompted her 
-               passion for health disparities in Obstetrics & Gynecology.</p>
+              EMS program, CUEMS.
+              She is an Undergraduate Research Fellow at Columbia University
+              Fertility Center conducting her own independent project in Dr.
+              Zev William’s embryology lab introducing automated liquid
+              handling. Attending a historically women’s college, working in
+              the medical field, and conducting a fertility research project
+              has fueled her interest in women’s health and prompted her
+              passion for health disparities in Obstetrics & Gynecology.</p>
           </div>
           <div class="grid-item">
             <img src="images/jonathan-bryson-harvey.png">
             <h3>Jonathan Bryson-Harvey</h3>
             <h4>Secretary</h4>
-            <p class="eb-bio">Tara Samsel is a senior studying Molecular and Cellular Biology 
-              at Barnard College of Columbia University on the pre-medical 
-              track. She oversees the Revision Editing and
-              Journalism departments of GYNECA. She is currently training to be
-              an Emergency Medical Technician at Columbia University’s volunteer
-               EMS program, CUEMS.
-               She is an Undergraduate Research Fellow at Columbia University 
-               Fertility Center conducting her own independent project in Dr. 
-               Zev William’s embryology lab introducing automated liquid 
-               handling. Attending a historically women’s college, working in 
-               the medical field, and conducting a fertility research project 
-               has fueled her interest in women’s health and prompted her 
-               passion for health disparities in Obstetrics & Gynecology.</p>
+            <p class="eb-bio">I'm Jonathan, a Freshman at Columbia college considering a major in Economics with a
+              Public Health concentration! Over the summer, I worked as a pharmacy technician, filling prescriptions and
+              seeing firsthand the disparities in adequate healthcare and the financial toll that buying life-saving
+              medications can take on families. I also completed my Emergency Medical Technician training at a local
+              community college. I'm very interested in healthcare equity and I think that starts with equal access to
+              health education and information, which is often neglected when it comes to women and other gender
+              minorities. </p>
           </div>
           <div class="grid-item">
             <img src="images/lucia-ruggiero.jpeg">
             <h3>Lucia Ruggiero</h3>
             <h4>Treasurer</h4>
-            <p class="eb-bio">Tara Samsel is a senior studying Molecular and Cellular Biology 
-              at Barnard College of Columbia University on the pre-medical 
-              track. She oversees the Revision Editing and
-              Journalism departments of GYNECA. She is currently training to be
-              an Emergency Medical Technician at Columbia University’s volunteer
-               EMS program, CUEMS.
-               She is an Undergraduate Research Fellow at Columbia University 
-               Fertility Center conducting her own independent project in Dr. 
-               Zev William’s embryology lab introducing automated liquid 
-               handling. Attending a historically women’s college, working in 
-               the medical field, and conducting a fertility research project 
-               has fueled her interest in women’s health and prompted her 
-               passion for health disparities in Obstetrics & Gynecology.</p>
+            <p class="eb-bio">Lucia Ruggiero is a junior at Barnard College, majoring in Urban Studies with a
+              specialization in public health. In the past, Lucia has interned at a management consulting firm in their
+              healthcare sector, assisted in the Carnethon epidemiology lab at Northwestern University, and volunteered
+              at various health advocacy non-profits. She is passionate about health inequities in women’s health and
+              hopes to bring a public health perspective to her future endeavors in health policy and management. </p>
           </div>
         </div>
 
@@ -320,32 +316,32 @@
           <div class="grid-item">
             <img src="images/claire_l.png">
             <h4>Claire Looney</h4>
-            <h5>Head of Journalism </h5> 
+            <h5>Head of Journalism </h5>
           </div>
           <div class="grid-item">
             <img src="images/hreedi-dev.jpeg">
             <h4>Hreedi Dev</h4>
-            <h5>Senior Scientific Editor</h5> 
+            <h5>Senior Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/aditi.png">
             <h4>Aditi Malhotra<h4>
-            <h5>Senior Scientific Editor</h5>
+                <h5>Senior Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/elaje-lopez.jpeg">
             <h4>Elaje Lopez<h4>
-            <h5>Senior Revision Editor</h5>
+                <h5>Senior Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/tara-samsel.png">
             <h4>Tara Samsel</h4>
-            <h5>Head of Layout</h5> 
+            <h5>Head of Layout</h5>
           </div>
           <div class="grid-item">
             <img src="images/joyce-wang.png">
             <h4>Joyce Wang</h4>
-            <h5>Head of Art</h5> 
+            <h5>Head of Art</h5>
           </div>
         </div>
 
@@ -356,45 +352,45 @@
         <div class="grid-container-com">
           <div class="grid-item">
             <img src="images/jaia-wingard.png">
-            <h4>Jaia Wingard</h4> 
-            <h5>Co-Director of Outreach</h5> 
+            <h4>Jaia Wingard</h4>
+            <h5>Co-Director of Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/kelly.png">
-            <h4>Kelly Peterson</h4> 
-            <h5>Co-Director of Outreach</h5> 
+            <h4>Kelly Peterson</h4>
+            <h5>Co-Director of Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/montaha-rahman.png">
             <h4>Montaha Rahman</h4>
-            <h5>Co-Director of National Submissions</h5> 
+            <h5>Co-Director of National Submissions</h5>
           </div>
           <div class="grid-item">
             <img src="images/tymeesha.png">
             <h4>Tymeesha-Elizabeth Kindell</h4>
-            <h5>Co-Director of National Submissions</h4> 
+            <h5>Co-Director of National Submissions</h4>
           </div>
           <div class="grid-item">
             <img src="images/chidinma.png">
             <h4>Chidinma Mba</h4>
-            <h5>Co-Director of Web Development</h5> 
+            <h5>Co-Director of Web Development</h5>
           </div>
           <div class="grid-item">
             <img src="images/elaine.png">
             <h4>Elaine Su</h4>
-            <h5>Co-Director of Web Development</h5> 
+            <h5>Co-Director of Web Development</h5>
           </div>
           <div class="grid-item">
             <img src="images/Hope_Trygstad.png">
             <h4>Hope Trygstad</h4>
-            <h5>Social Media Director</h5> 
+            <h5>Social Media Director</h5>
           </div>
         </div>
-        
+
         <div class="mh-heading-wrapper">
           <h2>Committee Members</h2>
         </div>
-        <div class = "grid-container-com">
+        <div class="grid-container-com">
           <div class="grid-item">
             <img src="images/aleecia-mejia.jpeg">
             <h4>Aleecia Mejia</h4>
@@ -403,147 +399,148 @@
           <div class="grid-item">
             <img src="images/emi-gaçaj.png">
             <h4>Emi Gaçaj</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/izabella-pacheco.png">
             <h4>Izabella Pacheco</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/jules-rocha.png">
             <h4>Jules Rocha</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/laura-conde.png">
             <h4>Laura Conde</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/Misha_Bhatia.png">
             <h4>Misha Bhatia</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/Neha_Mehta.png">
             <h4>Neha Mehta</h4>
-            <h5>Outreach</h5> 
+            <h5>Outreach</h5>
           </div>
           <div class="grid-item">
             <img src="images/NoelleTexeira.png">
             <h4>Noelle Texeira</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Paige_McCullough.png">
             <h4>Paige McCullough</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/lizzy-carpenter.png">
             <h4>Lizzy Carpenter</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Ramya_Arumilli.png">
             <h4>Ramya Arumilli</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Sofia_Cruz.png">
             <h4>Sofia Cruz</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/raine.png">
             <h4>Raine Williams</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/emilyche.png">
             <h4>Emily Che</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/abigail-hall.png">
             <h4>Abigail Hall</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
-          <div class="grid-item"> <!--change-->
+          <div class="grid-item">
+            <!--change-->
             <img src="images/arya-adake.png">
             <h4>Arya Adake</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/zoey.png">
             <h4>Zoey Cort</h4>
-            <h5>Scientific Editor</h5> 
+            <h5>Scientific Editor</h5>
           </div>
-          <div class="grid-item"> 
+          <div class="grid-item">
             <img src="images/Zane_Bekheet.png">
             <h4>Zane Bekheet</h4>
-            <h5>Journalist</h5> 
+            <h5>Journalist</h5>
           </div>
-          <div class="grid-item"> 
+          <div class="grid-item">
             <img src="images/Isabella_Voarino.png">
             <h4>Isabella Voarino</h4>
-            <h5>Journalist</h5> 
+            <h5>Journalist</h5>
           </div>
           <div class="grid-item">
             <img src="images/Erin_Donahue.png">
             <h4>Erin Donahue</h4>
-            <h5>Journalist</h5> 
+            <h5>Journalist</h5>
           </div>
           <div class="grid-item">
             <img src="images/Seraphima_Ogden.png">
             <h4>Seraphima Ogden</h4>
-            <h5>Journalist</h5> 
+            <h5>Journalist</h5>
           </div>
           <div class="grid-item">
             <img src="images/maya.png">
             <h4>Maya Joseph</h4>
-            <h5>Revision Editor</h5> 
+            <h5>Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/tierani.png">
             <h4>Tierani Green</h4>
-            <h5>Revision Editor</h5> 
+            <h5>Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Aidyn_Levin.png">
-            <h4>Aidyn Levin</h4> 
+            <h4>Aidyn Levin</h4>
             <h5>Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Hannah_Ramsey.png">
-            <h4>Hannah Ramsey</h4> 
+            <h4>Hannah Ramsey</h4>
             <h5>Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/Mia_Raneri.png">
-            <h4>Mia Raneri</h4> 
+            <h4>Mia Raneri</h4>
             <h5>Revision Editor</h5>
           </div>
           <div class="grid-item">
             <img src="images/ana-huesa.png">
             <h4>Ana Huesa</h4>
-            <h5>Web Development</h5> 
+            <h5>Web Development</h5>
           </div>
           <div class="grid-item">
             <img src="images/claire-nottman.png">
             <h4>Claire Nottman</h4>
-            <h5>Layout</h5> 
+            <h5>Layout</h5>
           </div>
           <div class="grid-item">
             <img src="images/allison-pak.png">
             <h4>Allison Pak</h4>
-            <h5>Social Media</h5> 
+            <h5>Social Media</h5>
           </div>
           <div class="grid-item">
             <img src="images/sammy-obel.png">
             <h4>Sammy Obel</h4>
-            <h5>Social Media</h5> 
+            <h5>Social Media</h5>
           </div>
           <!-- <div class="grid-item">
             <img src="">
@@ -580,14 +577,14 @@
         <div class="grid-container-com">
           <div class="grid-item fac">
             <img src="images/drhutcherson.png">
-            <h4>Dr. Hilda Hutcherson, MD</h4> 
+            <h4>Dr. Hilda Hutcherson, MD</h4>
             <h5>Professor of Obstetrics & Gynecology at Columbia University Medical Center</h5>
           </div>
           <div class="grid-item fac">
             <img src="images/drfirestein.jpeg">
-            <h4>Morgan Firestein, Ph.D.</h4> 
+            <h4>Morgan Firestein, Ph.D.</h4>
             <h5>Postdoctoral Research Fellow</h5>
-            <h5>Department of Psychiatry, Division of Developmental Neuroscience 
+            <h5>Department of Psychiatry, Division of Developmental Neuroscience
               Columbia University Medical Center/New York State Psychiatric Institute</h5>
           </div>
         </div>
@@ -603,11 +600,13 @@
           <h1>GYNECA</h1>
         </div>
         <div id="f-sm">
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a
+                href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
           </ul>
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a
+                href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
           </ul>
         </div>
       </div>
