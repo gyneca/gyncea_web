@@ -16,12 +16,14 @@
   <meta name="keywords" content="GYNECA, Columbia University, Women, Health, Journal, Scientific, Gynecology">
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-    .snippet h4{
+    .snippet h4 {
       line-height: 25px;
     }
 
-        /* Slideshow */
-    * {box-sizing:border-box}
+    /* Slideshow */
+    * {
+      box-sizing: border-box
+    }
 
     /* Slideshow container */
     .slideshow-container {
@@ -36,7 +38,8 @@
     }
 
     /* Next & previous buttons */
-    .prev, .next {
+    .prev,
+    .next {
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -59,8 +62,9 @@
     }
 
     /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.4);
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
     /* Caption text */
@@ -97,7 +101,8 @@
       transition: background-color 0.6s ease;
     }
 
-    .active-slide, .dot:hover {
+    .active-slide,
+    .dot:hover {
       background-color: #717171;
     }
 
@@ -108,182 +113,213 @@
       animation-name: fade;
       animation-duration: 1.5s;
     }
+
     .current-issue-content-container {
-      margin:0px 0px 0px 35px;
-    }
-    .current-issue-content-container h1 {
-      font-weight: 400; 
-      font-size: 32px;
-      color:black; 
-      margin-bottom: 15px; 
-      margin-top: 10px; 
-      font-family: Georgia;
-    }
-    .current-issue-content-container p {
-      font-size: 20px; 
-      font-family: Avenir;
-      line-height: 30px;
-      color:black;
-    }
-    .snippet h1 a{
-      font-size:32px;
-      font-family:Georgia;
-      color:black;
-      border-bottom: none;
+      margin: 0px 0px 0px 35px;
     }
 
-    .snippet h1 a:hover{
-      color: darkblue;
-      text-decoration: underline;
+    .current-issue-content-container h1 {
+      font-weight: 400;
+      font-size: 32px;
+      color: black;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      font-family: Georgia;
     }
-    .snippet h3{
-      font-size: 20px; 
-      font-family: Avenir;
-      color:black;
-      margin-bottom: 10px;
-    }
-    .snippet h4{
+
+    .current-issue-content-container p {
       font-size: 20px;
       font-family: Avenir;
       line-height: 30px;
-      color:black;
-      width:100%;
+      color: black;
+    }
+
+    .snippet h1 a {
+      font-size: 32px;
+      font-family: Georgia;
+      color: black;
+      border-bottom: none;
+    }
+
+    .snippet h1 a:hover {
+      color: darkblue;
+      text-decoration: underline;
+    }
+
+    .snippet h3 {
+      font-size: 20px;
+      font-family: Avenir;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .snippet h4 {
+      font-size: 20px;
+      font-family: Avenir;
+      line-height: 30px;
+      color: black;
+      width: 100%;
     }
 
     @-webkit-keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
     }
 
     @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
     }
-    .aim-scope h1{
-      text-align: center; 
-      font-family: Georgia; 
+
+    .aim-scope h1 {
+      text-align: center;
+      font-family: Georgia;
       color: #922E22;
       font-size: 39.5px;
-      padding-top:1.4em;
-      padding-bottom:0.9em;
+      padding-top: 1.4em;
+      padding-bottom: 0.9em;
     }
-    .aim-scope p{
-      text-align: center; 
+
+    .aim-scope p {
+      text-align: center;
       padding: 1px 8% 60px 8%;
-      font-family: Avenir; 
+      font-family: Avenir;
       font-size: 19px;
     }
 
-    #img-foreground{
-        position: absolute;
-        text-align: center;
-        width:100%; 
-        height: 290px;
-        object-fit:scale-down;
-        margin-top: 30px;
-        margin-bottom: 25px;
-        z-index: 20;
-    }
-    #img-background{
-        text-align: center;
-        width: 100%; 
-        height: 350px;
-        object-fit:cover;
-        z-index: 10;
-        margin-bottom: 25px;
+    #img-foreground {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      height: 290px;
+      object-fit: scale-down;
+      margin-top: 30px;
+      margin-bottom: 25px;
+      z-index: 20;
     }
 
-    .current-issue{
+    #img-background {
+      text-align: center;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      z-index: 10;
+      margin-bottom: 25px;
+    }
+
+    .current-issue {
       display: flex;
-      margin:auto;
-      justify-content: center; 
+      margin: auto;
+      justify-content: center;
       width: 100%;
     }
-    .caption-text{
+
+    .caption-text {
       display: none;
     }
-    .numbertext{
+
+    .numbertext {
       display: none;
     }
+
     @media screen and (max-width: 801px) {
-      #img-background{
+      #img-background {
         display: none;
       }
-      #img-foreground{
+
+      #img-foreground {
         float: none;
         display: block;
         margin-left: auto;
-        margin-right: auto; 
-        width:100%; 
+        margin-right: auto;
+        width: 100%;
         height: 290px;
         /* height:80%; */
         object-fit: cover;
         display: block;
         position: initial;
       }
-      .current-issue{
+
+      .current-issue {
         display: block;
       }
-      .current-issue-content-container{
-        margin:0px 0px 0px 0px;
+
+      .current-issue-content-container {
+        margin: 0px 0px 0px 0px;
       }
     }
 
     @media screen and (max-width: 500px) {
-      #img-foreground{
+      #img-foreground {
         float: none;
         display: block;
         margin-left: auto;
-        margin-right: auto; 
-        width:100%; 
+        margin-right: auto;
+        width: 100%;
         height: 200px;
         /* height:80%; */
         object-fit: cover;
         margin-bottom: 30px;
       }
-      .aim-scope h1{
+
+      .aim-scope h1 {
         font-size: 30px;
-        padding-top:1.4em;
-        padding-bottom:0.9em;
+        padding-top: 1.4em;
+        padding-bottom: 0.9em;
       }
-      .aim-scope p{
-        padding: 1px 8% 60px 8%; 
+
+      .aim-scope p {
+        padding: 1px 8% 60px 8%;
         font-size: 17px;
       }
-      .snippet h1{
-        font-size:29px;
+
+      .snippet h1 {
+        font-size: 29px;
       }
-      .snippet h3{
-        font-size: 16px; 
+
+      .snippet h3 {
+        font-size: 16px;
         margin-bottom: 10px;
       }
-      .snippet h4{
+
+      .snippet h4 {
         font-size: 16px;
         line-height: 30px;
-        width:100%;
+        width: 100%;
       }
+
       .current-issue-content-container h1 {
-        font-weight: 400; 
+        font-weight: 400;
         font-size: 29px;
-        color:black; 
-        margin-bottom: 15px; 
-        margin-top: 10px; 
+        color: black;
+        margin-bottom: 15px;
+        margin-top: 10px;
         font-family: Georgia;
       }
+
       .current-issue-content-container p {
-        font-size: 16px; 
+        font-size: 16px;
         font-family: Avenir;
         line-height: 30px;
-        color:black;
+        color: black;
       }
     }
 
     @media screen and (max-width: 1000px) {
-      .br-top{
-        display:none;
+      .br-top {
+        display: none;
       }
     }
-
   </style>
 </head>
 
@@ -299,10 +335,10 @@
           <!-- <img src="images/logo_white.png" /> -->
           <div style="position: absolute;">
             <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
-                <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;"/></a>
-                <div id="gyneca-title-container">
-                  <h1 id="gyneca-title"><i>GYNECA</i></h1>
-                </div>
+              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;" /></a>
+              <div id="gyneca-title-container">
+                <h1 id="gyneca-title"><i>GYNECA</i></h1>
+              </div>
             </div>
             <div class="tagline" style="clear:both;">
               <h1 id="gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h1>
@@ -312,15 +348,15 @@
       </div>
     </div>
     <nav class="topnav" id="nav">
-        <div id="mobile-title-icon">
-          <a href="index.html">
-            <img src="images/transparent_logo.png">
-            <h1 id="mobile-title"><i>GYNECA</i></h1>
-          </a>
-        </div>
+      <div id="mobile-title-icon">
+        <a href="index.html">
+          <img src="images/transparent_logo.png">
+          <h1 id="mobile-title"><i>GYNECA</i></h1>
+        </a>
+      </div>
       <a class="active" style="background-color: #f4f4f4; color: #523636;" href="index.html">Home</a>
       <div onclick="" class="dropdown">
-        <a class="dropbtn">About 
+        <a class="dropbtn">About
           <!-- <i class="fa fa-caret-down"></i> -->
         </a>
         <div class="dropdown-content">
@@ -337,12 +373,14 @@
           <!-- <i class="fa fa-caret-down"></i> -->
         </a>
         <div class="dropdown-content">
-            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
             Roles and Responsibilities
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
-              Become a Peer Reviewer
-            </a>
+          </a>
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
+            Become a Peer Reviewer
+          </a>
           <!--for applications sub tabs-->
           <!-- <div class="sub-dropdown">
             <a target="_blank" rel="noopener noreferrer" href="join.html">
@@ -413,16 +451,24 @@
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    <span id="aim-scope"></span> <!--Allows for page jump just above aim and scope section from guidelines.html-->
+    <span id="aim-scope"></span>
+    <!--Allows for page jump just above aim and scope section from guidelines.html-->
     <br>
     <!--Aim and Scope-->
-    
+
     <div class="container wrapper">
       <section class="aim-scope" style="background-color: #F4F4F4;">
-        <em><h1>Aim & Scope</h1></em>
-        <p>GYNECA is a semesterly intercollegiate journal publishing undergraduate peer-reviewed research in all fields of women's health and gynecology on the basis of its originality, importance, interdisciplinary interest, timeliness, accessibility, elegance and surprising conclusions. GYNECA also provides rapid, authoritative, and insightful news and interpretation of topical and coming trends affecting science, scientists and the wider public.</p>
+        <em>
+          <h1>Aim & Scope</h1>
+        </em>
+        <p>GYNECA is a semesterly intercollegiate journal publishing undergraduate peer-reviewed research in all fields
+          of gynecology and gender minority healthcare on the basis of its originality, importance, interdisciplinary
+          interest, timeliness, accessibility, elegance and surprising conclusions. GYNECA also provides rapid,
+          authoritative, and insightful news and interpretation of topical and coming trends affecting science,
+          scientists and the wider public.
+        </p>
       </section>
-    </div>    
+    </div>
     <br>
 
     <!--Current Issue-->
@@ -430,30 +476,37 @@
       <section>
         <div class="current-issue">
           <div style="width: 100%;">
-            <img id="img-foreground" src="images/img_microscope.jpg"/>
+            <img id="img-foreground" src="images/img_microscope.jpg" />
             <img id="img-background" src="images/img_microscope copy.jpg">
           </div>
         </div>
       </section>
     </div>
-    
+
     <!--Bottom Page Snippets-->
     <div class="container wrapper">
-    	<section class="snippet">
-    		<h1><a href="blog-articles/staff-writing/do-periods-actually-sync.html">Do Periods Actually Sync?</a></h1>
-    		<h3>May 4, 2022</h3>
-    		<h4>
-          “Pain shared is pain lessened,” people have always hypothesized — does the uterus yearn for such commisteration as well?
-The comfort of realizing you are not the only one on your period—suffering from the dreadful cramps that consume every minute, navigating the overwhelming mood swings, and permeating discomfort—-temporarily ameliorates the dreaded-painful monthly anniversary.</h4>
-    	</section>
+      <section class="snippet">
+        <h1><a href="blog-articles/staff-writing/do-periods-actually-sync.html">Do Periods Actually Sync?</a></h1>
+        <h3>May 4, 2022</h3>
+        <h4>
+          “Pain shared is pain lessened,” people have always hypothesized — does the uterus yearn for such
+          commisteration as well?
+          The comfort of realizing you are not the only one on your period—suffering from the dreadful cramps that
+          consume every minute, navigating the overwhelming mood swings, and permeating discomfort—-temporarily
+          ameliorates the dreaded-painful monthly anniversary.</h4>
+      </section>
     </div>
     <br>
     <div class="container wrapper">
-    	<section class="snippet">
-    		<h1><a href="blog-articles/staff-writing/can-you-c-the-difference.html">Can you “C” the Difference?: A Comparison of C-section rates across NYC Boroughs</a></h1>
-    		<h3>May 4, 2022</h3>
-        <h4>As technology advances encourage improvements in maternal healthcare, the number of Cesarean sections has risen significantly. According to the World Health Organization, C-section rates worldwide have increased from approximately 7% in 1990 to about 21% currently [1]. With this dramatic rise, WHO predicts that 29% of all births will be via C-section by 2030.</h4>
-    		</section>
+      <section class="snippet">
+        <h1><a href="blog-articles/staff-writing/can-you-c-the-difference.html">Can you “C” the Difference?: A
+            Comparison of C-section rates across NYC Boroughs</a></h1>
+        <h3>May 4, 2022</h3>
+        <h4>As technology advances encourage improvements in maternal healthcare, the number of Cesarean sections has
+          risen significantly. According to the World Health Organization, C-section rates worldwide have increased from
+          approximately 7% in 1990 to about 21% currently [1]. With this dramatic rise, WHO predicts that 29% of all
+          births will be via C-section by 2030.</h4>
+      </section>
     </div>
     <br>
 
@@ -482,11 +535,13 @@ The comfort of realizing you are not the only one on your period—suffering fro
           <h1>GYNECA</h1>
         </div>
         <div id="f-sm">
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer"
+                href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
           </ul>
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer"
+                href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
           </ul>
         </div>
       </div>

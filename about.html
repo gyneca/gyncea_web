@@ -14,19 +14,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-    .grid-container-1{
+    .grid-container-1 {
       display: grid;
       grid-template-columns: auto auto;
       /* text-align: center; */
       width: 100%;
       margin: 0 auto;
     }
-    .grid-item-title{
+
+    .grid-item-title {
       width: 100%;
       text-align: left;
       /* padding-left: 75px; */
       padding-top: 10px;
     }
+
     .grid-item-title h1 {
       font-family: Georgia;
       font-size: 40px;
@@ -34,11 +36,13 @@
       font-weight: lighter;
       color: black;
     }
+
     .grid-item-text {
-      direction:ltr;
-      text-align:justify;
+      direction: ltr;
+      text-align: justify;
     }
-    .grid-item-text p{
+
+    .grid-item-text p {
       font-family: Avenir;
       font-size: 19px;
       line-height: 1.45;
@@ -46,14 +50,15 @@
       padding-right: 85px;
     }
 
-    .grid-container-2{
+    .grid-container-2 {
       display: grid;
       grid-template-columns: 33% 33% 33%;
       width: 100%;
       margin: 0 auto;
       text-align: center;
     }
-    .grid-item{
+
+    .grid-item {
       background-color: #F4F4F4;
       margin: auto;
       padding-top: 15px;
@@ -61,29 +66,33 @@
       border-radius: 12px;
       width: 70%;
     }
-    .grid-item img{
+
+    .grid-item img {
       width: 5%;
       margin: auto;
       display: block;
     }
-    .grid-item p{
+
+    .grid-item p {
       padding-top: 8px;
       margin: auto;
-      color:#922E22;
+      color: #922E22;
       font-size: 24px;
     }
-    .grid-item-bottom-text{
+
+    .grid-item-bottom-text {
       width: 50%;
       margin: auto;
       margin-top: 15px;
     }
-    .grid-item-bottom-text p{
+
+    .grid-item-bottom-text p {
       font-family: Avenir;
       font-size: 16px;
       line-height: 1.65;
     }
 
-    .grid-container-3{
+    .grid-container-3 {
       display: grid;
       grid-template-columns: 30% 70%;
       text-align: center;
@@ -92,10 +101,12 @@
       padding-top: 70px;
       padding-bottom: 35px;
     }
-    .grid-item-title-3{
+
+    .grid-item-title-3 {
       width: 100%;
       padding-left: 75px;
     }
+
     .grid-item-title-3 h1 {
       font-family: Georgia;
       font-size: 39px;
@@ -104,80 +115,92 @@
       text-align: left;
       color: black;
     }
+
     .grid-item-text-3 {
       width: 100%;
       padding-right: 110px;
     }
-    .grid-item-text-3 p{
+
+    .grid-item-text-3 p {
       font-family: Avenir;
       font-size: 20px;
       text-align: right;
     }
 
     @media screen and (max-width: 930px) {
-      .grid-container-1{
+      .grid-container-1 {
         grid-template-columns: auto;
       }
-      .grid-item-title h1{
+
+      .grid-item-title h1 {
         margin-right: 0;
         text-align: center;
       }
-      .grid-item-text p{
+
+      .grid-item-text p {
         margin-right: 0;
         padding: 0;
         padding-top: 25px;
         text-align: center;
         /* text-align: center; */
       }
-      .grid-container-2 .grid-item p{
+
+      .grid-container-2 .grid-item p {
         font-size: 20px;
       }
-      .grid-container-2{
+
+      .grid-container-2 {
         grid-template-columns: auto;
       }
-      .grid-container-2 .grid-item{
+
+      .grid-container-2 .grid-item {
         padding: 0;
         margin-top: 10px;
         width: 80%;
       }
-      .grid-container-2 .grid-item img{
+
+      .grid-container-2 .grid-item img {
         margin-top: 15px;
       }
 
-      .grid-item-bottom-text{
+      .grid-item-bottom-text {
         display: none;
       }
-      .grid-container-3{
+
+      .grid-container-3 {
         grid-template-columns: auto;
         padding-top: 35px;
         padding-bottom: 17.5px;
       }
-      .grid-container-3 h1{
+
+      .grid-container-3 h1 {
         text-align: center;
         font-size: 30px;
         margin: 0;
       }
-      .grid-item-title-3{
+
+      .grid-item-title-3 {
         padding: 0;
         margin-bottom: 20px;
       }
-      .grid-item-text-3{
+
+      .grid-item-text-3 {
         padding-left: 14px;
         padding-right: 14px;
       }
-      .grid-container-3 p{
+
+      .grid-container-3 p {
         text-align: center;
         font-size: 15px;
       }
     }
 
     @media screen and (max-width: 500px) {
-      .topnav{
+      .topnav {
         position: fixed;
         top: 0;
       }
     }
-  
   </style>
 </head>
 
@@ -193,14 +216,14 @@
           <!-- <img src="images/logo_white.png" /> -->
           <div style="position: absolute;">
             <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
-              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;"/></a>
-              <!-- <div class="name"> --> 
+              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;" /></a>
+              <!-- <div class="name"> -->
               <div id="gyneca-title-container">
                 <h1 id="gyneca-title"><i>GYNECA</i></h1>
               </div>
               <!-- </div> -->
             </div>
-            <div  class="tagline" style="clear:both;">
+            <div class="tagline" style="clear:both;">
               <h1 id="gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h1>
             </div>
           </div>
@@ -215,33 +238,35 @@
           <h1 id="mobile-title"><i>GYNECA</i></h1>
         </a>
       </div>
-    <a style="background-color: #f4f4f4;" href="index.html">Home</a>
-    <div onclick="" class="dropdown">
-      <a class="active" class="dropbtn" style="color: #523636;">About 
-        <!-- <i class="fa fa-caret-down"></i> -->
-      </a>
-      <div class="dropdown-content">
-        <a href="about.html">About</a>
-        <a href="masthead.html">Masthead</a>
-        <a href="faq.html">FAQs</a>
+      <a style="background-color: #f4f4f4;" href="index.html">Home</a>
+      <div onclick="" class="dropdown">
+        <a class="active" class="dropbtn" style="color: #523636;">About
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="masthead.html">Masthead</a>
+          <a href="faq.html">FAQs</a>
+        </div>
       </div>
-    </div>
-    <a href="submissions.html">Submissions</a>
-    <a href="guidelines.html">Guidelines</a>
-    <a href="blog.html">Blog</a>
-    <div onclick="" class="dropdown">
-      <a class="dropbtn">Join
-        <!-- <i class="fa fa-caret-down"></i> -->
-      </a>
-      <div class="dropdown-content">
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
-          Roles and Responsibilities
+      <a href="submissions.html">Submissions</a>
+      <a href="guidelines.html">Guidelines</a>
+      <a href="blog.html">Blog</a>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn">Join
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/document/d/18Y_2upW2-XE326KcDDzcwKjXMxJ3Oz8FJ3KPjnKg6S0/edit">
+            Roles and Responsibilities
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
             Become a Peer Reviewer
           </a>
-        <!--for applications sub tabs-->
-        <!-- <div class="sub-dropdown">
+          <!--for applications sub tabs-->
+          <!-- <div class="sub-dropdown">
           <a target="_blank" rel="noopener noreferrer" href="join.html">
             Applications
           </a>
@@ -254,14 +279,14 @@
             </a>
           </div>
         </div> -->
+        </div>
       </div>
-    </div>
-    <a href="contact.html">Contact</a>
-    <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
-  </nav>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
+    </nav>
 
 
-    
+
 
     <!-- Main -->
     <br><br>
@@ -272,13 +297,11 @@
         </div>
         <div class="grid-item-text">
           <p>
-            GYNECA is a semesterly intercollegiate journal publishing
-            undergraduate peer-reviewed research in all fields of women's
-            health and gynecology on the basis of its originality, importance,
-            interdisciplinary interest, timeliness, accessibility, elegance and
-            surprising conclusions. GYNECA also provides rapid, authoritative, 
-            and insightful news and interpretation of topical and coming trends 
-            affecting science, scientists and the wider public.
+            GYNECA is a semesterly intercollegiate journal publishing undergraduate peer-reviewed research in all fields
+            of gynecology and gender minority healthcare on the basis of its originality, importance, interdisciplinary
+            interest, timeliness, accessibility, elegance and surprising conclusions. GYNECA also provides rapid,
+            authoritative, and insightful news and interpretation of topical and coming trends affecting science,
+            scientists and the wider public.
           </p>
         </div>
       </div>
@@ -288,65 +311,71 @@
     <div class="container" id="main">
       <div class="grid-container-2">
         <div class="grid-item">
-          <img src="images/transparent_logo.png"/>
+          <img src="images/transparent_logo.png" />
           <p style="width:49%;">Promote gender-based biology</p>
         </div>
         <div class="grid-item">
-          <img src="images/transparent_logo.png"/>
+          <img src="images/transparent_logo.png" />
           <p style="width:55%;">Address social determinants of health</p>
         </div>
         <div class="grid-item">
-          <img src="images/transparent_logo.png"/>
+          <img src="images/transparent_logo.png" />
           <p style="width:67%">Provide a voice for undergraduate & graduate students</p>
         </div>
 
         <div class="grid-item-bottom-text">
-          <p>We highlight the intersection between sex, gender, and health, 
-             working to improve patient care and treatment.</p>
+          <p>Promote healthcare research on women and sexual and gender minorities (SGM)
+          </p>
         </div>
         <div class="grid-item-bottom-text">
-          <p>We focus on populations of women that are underrepresented,
-             understudied, and underreported in health research.</p>
+          <p>WWe focus on people that are underrepresented,
+            understudied, and underreported in health research.</p>
         </div>
         <div class="grid-item-bottom-text">
           <p>We include student research in the health discourse.<br><br><br></p>
         </div>
-        
+
       </div>
     </div>
 
     <br>
     <div style="background-color: #F4F4F4; z-index: auto;">
-        <div class="grid-container-3">
-          <div class="grid-item-title-3">
-            <h1>Women’s Health Goes Beyond</h1>
-          </div>
-          <div class="grid-item-text-3">
-            <p>
-              "Medicine has inherited a troubling legacy of gaps and 
-              omissions that it is trying to redress. But gender bias in 
-              medicine is not only scientific or biomedical. It is cultural, 
-              it is social, it is political." <br> —Elinor Cleghorn, Author 
-              of Unwell Women: Misdiagnosis and Myth in a Man-Made World
-            </p>
-          </div>
-        </div> 
+      <div class="grid-container-3">
+        <div class="grid-item-title-3">
+          <h1>Bias in medicine goes beyond the scientific</h1>
+        </div>
+        <div class="grid-item-text-3">
+          <p>
+            "Medicine has inherited a troubling legacy of gaps and
+            omissions that it is trying to redress. But gender bias in
+            medicine is not only scientific or biomedical. It is cultural,
+            it is social, it is political." <br> —Elinor Cleghorn, Author
+            of Unwell Women: Misdiagnosis and Myth in a Man-Made World
+          </p>
+        </div>
+      </div>
     </div>
 
     <br><br><br>
     <div class="container" id="main">
-        <h1 style="font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;"><em>Why</em> is women's health so under-researched?</h1>
-        <br>
-        <p style="font-family: Avenir;">Because of the persistent idea that female hormonal cycles would 
-          complicate experiments. The solution? Using only one sex in clinical 
-          trials, which would reduce "variation" in results. The thalidomide 
-          disaster in the 1960s led to the sentiment that women of 
-          reproductive age should be protected from damaging pharmaceuticals. 
-          In 1977, the FDA issued guidelines that excluded essentially all 
-          women from trials. <br><br> Now, scientists have been playing catch-up 
-          for the past couple of decades, but this longtime bias has created 
-          a HUGE gap in the role that sex and gender differences play in 
-          health and disease.</p>
+      <h1 style="font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;"><em>Why</em> is Women and
+        gender minorities’
+        Health so under-researched?”
+      </h1>
+      <br>
+      <p style="font-family: Avenir;">Because of the persistent idea that female hormonal cycles would complicate
+        experiments. The solution? Using only one sex in clinical trials, which would reduce "variation" in results. The
+        thalidomide disaster in the 1960s led to the sentiment that women of reproductive age should be protected from
+        damaging pharmaceuticals. In 1977, the FDA issued guidelines that excluded essentially all women from trials.
+        <br><br> Currently, poor health outcomes for sexual and gender minorities (SGM) is one of the most pressing
+        global health issues, yet data for measuring and monitoring health of SGM populations—including members of the
+        lesbian, gay, bisexual, transgender, and queer communities–have been extremely under-researched in the US.
+        Although SGM populations report higher percentages of cancer diagnoses compared to heterosexual people, studies
+        exploring the needs and outcomes of sexual minorities with cancers besides breast and prostrate cancers is
+        severely limited.
+        <br><br> Now, scientists have been playing catch-up for the past couple of decades, but this longtime bias has
+        created a HUGE gap in the role that sex and gender differences play in health and disease.
+      </p>
     </div>
 
     <br><br>
@@ -355,7 +384,7 @@
         Exactly how HUGE the gap is:
       </h1>
       <br><br>
-      <img style="width:90%; margin:auto;display:block;" src="images/gap.png"/>
+      <img style="width:90%; margin:auto;display:block;" src="images/gap.png" />
     </div>
 
     <br>
@@ -367,11 +396,13 @@
           <h1>GYNECA</h1>
         </div>
         <div id="f-sm">
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a
+                href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
           </ul>
-          <ul class="icons footer-ul"> 
-            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a
+                href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
           </ul>
         </div>
       </div>
