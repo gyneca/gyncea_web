@@ -796,6 +796,7 @@ body{
 	text-decoration: none;
 	display: block;
 	text-align: left;
+	line-height: 2;
   }
   
   .topnav a:hover, .dropdown:hover .dropbtn {
