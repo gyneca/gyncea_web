@@ -982,6 +982,11 @@ body{
 		margin: 0 8% 0 8%;
 	}
   }
+
+#journal-section {
+	background-color: #F9F9F9
+}
+
 @media screen and (max-width: 680px) {
 	/* #f-sm{
 		padding-left: 55px;
@@ -995,6 +1000,9 @@ body{
 	#f-icon-title{
 		float: none;
 	}  
+	#journal-section{
+		background-color: #ffffff00;
+	}
 }
 
 @media screen and (min-width: 500px) {
