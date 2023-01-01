@@ -281,7 +281,7 @@ input::-moz-focus-inner {
 /* Container */
 
 	.container {
-		margin: 0 8% 0 8%;
+		margin: 0 16% 0 16%;
 		/* max-width: 1400px;
 		width: 100%; */
 	}
@@ -728,7 +728,7 @@ body{
 .topnav {
 	width: 100%;
 	display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
 	background-color: #f4f4f4;
   }
   
@@ -923,14 +923,14 @@ body{
   #f{
 	background-color: #f4f4f4;
 	padding: 30px 8% 30px 8%;
-	text-align: center;
 	width: 100%;
-	position:static;
+  }
+
+  #f-content{
+	  text-align: center;
   }
   #f-icon-title{
-	  text-align: center;
 	  display: inline-flex;
-	  float: left;
   }
   #f h1{
 	padding-top: 10px;
@@ -941,14 +941,11 @@ body{
   #f img{
 	  width:28.832px;
 	  height: 54.4px; 
-	  /* float: left; */
   }
   #f-sm{
 	  padding-top: 5px;
-	  /* margin-right: 10%; */
   }
   #f-sm a{
-	  /* width: 20%; */
 	  font-size: 17px;
   }
   #mobile-title-icon{
@@ -980,6 +977,9 @@ body{
 	#mobile-title{
 		font-size: 25px;
 		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
+	.container {
+		margin: 0 8% 0 8%;
 	}
   }
 @media screen and (max-width: 680px) {
