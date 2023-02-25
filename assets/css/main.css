@@ -24,7 +24,7 @@ iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+u, i, center, dl, dt, dd, ol, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
@@ -60,9 +60,9 @@ body {
 	line-height: 1;
 }
 
-ol, ul {
+/* ol, ul {
 	list-style: none;
-}
+} */
 
 blockquote, q {
 	quotes: none;
@@ -229,9 +229,9 @@ input::-moz-focus-inner {
 		font-style: italic;
 	}
 
-	p, ul, ol, dl, table {
+	/* p, ul, ol, dl, table {
 		margin-bottom: 1.5em;
-	}
+	} */
 
 	br.clear {
 		clear: both;
@@ -463,7 +463,7 @@ input::-moz-focus-inner {
 		/* left: 0; */
 		width: 100%;
 		/* height: fit-content; */
-		line-height: 4em;
+		line-height: 3em;
 	}
 
 		
@@ -737,12 +737,11 @@ body{
 	display: block;
 	color: #922e22; 
 	text-align: center;
-	padding: 14px 16px;
 	text-decoration: none;
 	/* font-size: 15px; */
 	letter-spacing: 0.2em;
 	border: none;
-	padding: 0em 0.5em 0em 0.5em;
+	padding: 0em 0em 0em 0em;
 	text-transform: uppercase;
 	font-size: 13px;
 }
@@ -922,8 +921,9 @@ body{
 
   #f{
 	background-color: #f4f4f4;
-	padding: 30px 8% 30px 8%;
+	padding: 30px 15% 30px 15%;
 	width: 100%;
+	overflow: hidden;
   }
 
   #f-content{
@@ -935,7 +935,7 @@ body{
   #f h1{
 	padding-top: 10px;
 	padding-left: 20px;
-	font-size: 30px;
+	font-size: 50px;
 	font-family:'Times New Roman', Times, serif;
   }
   #f img{
@@ -947,6 +947,9 @@ body{
   }
   #f-sm a{
 	  font-size: 17px;
+  }
+  #f-sm ul{
+	list-style-type: none;
   }
   #mobile-title-icon{
 	display: none;
