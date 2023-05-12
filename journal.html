@@ -119,17 +119,18 @@
     <h1 style="text-align: center;color: #922E22;font-size: 30px;">Volume 1 Issue 1</h1>
     <br>
     <div class="container" style="text-align:center;">
-        <iframe src="https://player.flipsnack.com?hash=QzdBOUM4RUVGQjUrdGNzZHF3NDhhNg==" 
+        <!-- <iframe src="https://player.flipsnack.com?hash=QzdBOUM4RUVGQjUrdGNzZHF3NDhhNg==" 
             height="501" 
             width="100%"
             seamless="seamless" 
             scrolling="no" 
             frameBorder="0" 
-            allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> -->
-        <a href="./journals/Fall 2022/Volume 1 Issue 1.pdf">Link to the PDF version of the Journal</a>
-        <!-- <iframe src="./journals/Fall 2022/Volume 1 Issue 1.pdf"
+            allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> 
+        <a id="fall2022journal">Link to the PDF version of the Journal</a> -->
+        <iframe id="fall2022journal"
         height="1000px"
-        width="100%"></iframe> -->
+        width="100%"></iframe>
+        
     </div>
     <br>
     <br>
@@ -197,7 +198,69 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/slideshow.js"></script>
   <script src="assets/js/dynamicnav.js"></script>
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  <script type="module">
+    import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
+    import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
+
+      // TODO: Replace the following with your app's Firebase project configuration
+  // See: https://firebase.google.com/docs/web/learn-more#config-object
+  const firebaseConfig = {
+    // ...
+    storageBucket: 'gs://gyneca-82aac.appspot.com',
+    name: 'gyneca',
+    projectId: 'gyneca-82aac'
+  };
+  
+  // Initialize Firebase
+  const firebase = initializeApp(firebaseConfig);
+  // Initialize Cloud Storage and get a reference to the service
+  // const storage = firebase.storage();
+  const storage = getStorage(firebase, 'gs://gyneca-82aac.appspot.com');
+  
+  // Create a storage reference from our storage service
+  var storageRef = ref(storage, "/");
+  
+  // Create a child reference
+  var journalsRef = _getChild(storageRef, 'journals/Fall2022');
+  // imagesRef now points to 'images'
+  
+  
+  // Child references can also take paths delimited by '/'
+  var mastheadRef = _getChild(storageRef, 'images/masthead');
+  // spaceRef now points to "images/space.jpg"
+  // imagesRef still points to "images"
+  getDownloadURL(_getChild(journalsRef, "Volume 1 Issue 1.pdf"))
+    .then((url) => {
+      // `url` is the download URL for 'images/stars.jpg'
+  
+      // This can be downloaded directly:
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = (event) => {
+        var blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+
+      console.log(url)
+      // Or inserted into an <img> element
+      var img = document.getElementById('fall2022journal');
+      img.setAttribute('src', url);
+      console.log("hello")
+
+    })
+    .catch((error) => {
+      // Handle any errors
+    });
+
+    </script>
 
 </body>
-
 </html>

@@ -29,31 +29,30 @@
       padding-top: 10px;
     }
 
-    .grid-item-title h1 {
+    .about-title{
       font-family: Georgia;
+      font-style: italic;
       font-size: 40px;
-      margin-right: 35px;
       font-weight: lighter;
-      color: black;
+      color: #922E22;
+      margin: auto;
+      text-align: center;
     }
 
-    .grid-item-text {
-      direction: ltr;
-      text-align: justify;
-    }
 
     .grid-item-text p {
       font-family: Avenir;
       font-size: 19px;
       line-height: 1.45;
-      padding-left: 45px;
-      padding-right: 85px;
+      text-align: center;
+      margin-left: 10%;
+      margin-right: 10%;
     }
 
     .grid-container-2 {
       display: grid;
       grid-template-columns: 33% 33% 33%;
-      width: 100%;
+      width: 80%;
       margin: 0 auto;
       text-align: center;
     }
@@ -67,11 +66,11 @@
       width: 70%;
     }
 
-    .grid-item img {
+    /* .grid-item img {
       width: 5%;
       margin: auto;
       display: block;
-    }
+    } */
 
     .grid-item p {
       padding-top: 8px;
@@ -81,15 +80,17 @@
     }
 
     .grid-item-bottom-text {
-      width: 50%;
+      width: 75%;
       margin: auto;
       margin-top: 15px;
     }
 
     .grid-item-bottom-text p {
       font-family: Avenir;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.65;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #922E22;
     }
 
     .grid-container-3 {
@@ -127,6 +128,13 @@
       text-align: right;
     }
 
+    .infographic-items {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 1.0);
+      text-align: center;
+      padding: 10px;
+    }
+
     @media screen and (max-width: 930px) {
       .grid-container-1 {
         grid-template-columns: auto;
@@ -159,7 +167,7 @@
         width: 80%;
       }
 
-      .grid-container-2 .grid-item img {
+      .grid-container-2 img {
         margin-top: 15px;
       }
 
@@ -305,76 +313,56 @@
 
 
     <!-- Main -->
-    <br><br>
-    <div class="container" id="main">
-      <div class="grid-container-1">
-        <div class="grid-item-title">
-          <h1>Our Mission</h1>
-        </div>
-        <div class="grid-item-text">
-          <p>
-            GYNECA is a semesterly intercollegiate journal publishing undergraduate peer-reviewed research in all fields
-            of gynecology and gender minority healthcare on the basis of its originality, importance, interdisciplinary
-            interest, timeliness, accessibility, elegance and surprising conclusions. GYNECA also provides rapid,
-            authoritative, and insightful news and interpretation of topical and coming trends affecting science,
-            scientists and the wider public.
-          </p>
-        </div>
-      </div>
-    </div>
     <br>
-
     <div class="container" id="main">
+      <h1 class="about-title">Our Mission</h1>
+      <br>
+      <div class="grid-item-text">
+        <p>
+          GYNECA is a semesterly intercollegiate journal publishing undergraduate peer-reviewed research in all fields
+          of gynecology and gender minority healthcare on the basis of its originality, importance, interdisciplinary
+          interest, timeliness, accessibility, elegance and surprising conclusions. GYNECA also provides rapid,
+          authoritative, and insightful news and interpretation of topical and coming trends affecting science,
+          scientists and the wider public.
+        </p>
+      </div>
+      <br>
+      <img width="80%" style="margin-left:10%;margin-right: 10%;" src="images/group-picnic-photo.png"/>
+      <br>
       <div class="grid-container-2">
-        <div class="grid-item">
-          <img src="images/transparent_logo.png" />
-          <p style="width:49%;">Promote gender-based biology</p>
-        </div>
-        <div class="grid-item">
-          <img src="images/transparent_logo.png" />
-          <p style="width:55%;">Address social determinants of health</p>
-        </div>
-        <div class="grid-item">
-          <img src="images/transparent_logo.png" />
-          <p style="width:67%">Provide a voice for undergraduate & graduate students</p>
-        </div>
+
+          <img width="90%" style="margin-right: 10%;margin-top: 10%;" src="images/ZANE BAKHEET (Carmen).JPG" />
+          <img width="90%" style="margin-left: 5%;margin-right: 15%;margin-top: 10%;" src="images/ERIN DONAHUE (Carmen).JPG" />
+          <img width="90%" style="margin-left: 10%;margin-top: 10%;" src="images/ISABELLA VOARINO (Joyce).jpg" />
 
         <div class="grid-item-bottom-text">
-          <p>Promote healthcare research on women and sexual and gender minorities (SGM)
-          </p>
+          <p>Promote gender-based biology</p>
         </div>
         <div class="grid-item-bottom-text">
-          <p>We focus on people that are underrepresented,
-            understudied, and underreported in health research.</p>
+          <p>Address social determinants of health</p>
         </div>
         <div class="grid-item-bottom-text">
-          <p>We include student research in the health discourse.<br><br><br></p>
+          <p>Provide a voice for undergraduate & graduate students<br><br><br></p>
         </div>
 
+      </div>
+    </div>
+
+    <div style="background-color: #F4F4F4;">
+      <div style="display: grid;grid-template-columns: 30% 70%;padding-top: 30px;padding-bottom: 30px;" class="container">
+        <h1 style="color:#922E22; font-size: 35px;width: 100%;">Women's Health Goes Beyond</h1>
+        <p style="width:100%; font-family: Avenir;">“Medicine has inherited a troubling legacy of gaps and omissions 
+            that it is trying to redress. But gender bias in medicine is not 
+            only scientific or biomedical. It is cultural, it is social, it is 
+            political.”<br><span style="color:#922E22">—Elinor Cleghorn, Author of Unwell Women:  Misdiagnosis and Myth in a Man-Made World</span>
+        </p>
       </div>
     </div>
 
     <br>
-    <div style="background-color: #F4F4F4; z-index: auto;">
-      <div class="grid-container-3">
-        <div class="grid-item-title-3">
-          <h1>Bias in medicine goes beyond the scientific</h1>
-        </div>
-        <div class="grid-item-text-3">
-          <p>
-            "Medicine has inherited a troubling legacy of gaps and
-            omissions that it is trying to redress. But gender bias in
-            medicine is not only scientific or biomedical. It is cultural,
-            it is social, it is political." <br> —Elinor Cleghorn, Author
-            of Unwell Women: Misdiagnosis and Myth in a Man-Made World
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <br><br><br>
+    <br>
     <div class="container" id="main">
-      <h1 style="font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;"><em>Why</em> is Women and
+      <h1 style="font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;color:#922E22"><em>Why</em> is Women and
         gender minorities’
         Health so under-researched?
       </h1>
@@ -383,26 +371,41 @@
         experiments. The solution? Using only one sex in clinical trials, which would reduce "variation" in results. The
         thalidomide disaster in the 1960s led to the sentiment that women of reproductive age should be protected from
         damaging pharmaceuticals. In 1977, the FDA issued guidelines that excluded essentially all women from trials.
-        <br><br> Currently, poor health outcomes for sexual and gender minorities (SGM) is one of the most pressing
-        global health issues, yet data for measuring and monitoring health of SGM populations—including members of the
-        lesbian, gay, bisexual, transgender, and queer communities–have been extremely under-researched in the US.
-        Although SGM populations report higher percentages of cancer diagnoses compared to heterosexual people, studies
-        exploring the needs and outcomes of sexual minorities with cancers besides breast and prostrate cancers is
-        severely limited.
-        <br><br> Now, scientists have been playing catch-up for the past couple of decades, but this longtime bias has
-        created a HUGE gap in the role that sex and gender differences play in health and disease.
       </p>
     </div>
 
-    <br><br>
-    <div class="container" id="main">
-      <h1 style="font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;">
-        Exactly how HUGE the gap is:
-      </h1>
-      <br><br>
-      <img style="width:90%; margin:auto;display:block;" src="images/gap.png" />
+    <br>
+    <div class="container">
+      <div style="display: grid;grid-template-columns: 33% 33% 33%; grid-gap: 5px; padding: 5px;background-color: #922E22;">
+        <div class="infographic-items">
+          <img width="100%" src="images/10FDA-approved_img.png"/>
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/3Trials_img.png" />
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/risk_infograpic.png" />
+        </div>  
+        <div class="infographic-items">
+          <img width="100%" src="images/cancer-diagnoses_infographic.png" />
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/million_infographic.png" />
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/side-effects_infographic.png"/>
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/breast-cancer_infographic.png"/>
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/23men_infograpic.png"/>
+        </div>
+        <div class="infographic-items">
+          <img width="100%" src="images/blood_infographic.png" />
+        </div>
+      </div>
     </div>
-
     <br>
     <!-- Footer -->
     <div id="f">
