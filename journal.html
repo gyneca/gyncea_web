@@ -15,6 +15,80 @@
   <meta name="description" content="Columbia Undergraduate Journal of Gynecology and Women's Health">
   <meta name="keywords" content="GYNECA, Columbia University, Women, Health, Journal, Scientific, Gynecology">
   <link rel="stylesheet" href="assets/css/main.css" />
+
+  <script type="module">
+    import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
+    import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
+
+      // TODO: Replace the following with your app's Firebase project configuration
+  // See: https://firebase.google.com/docs/web/learn-more#config-object
+  const firebaseConfig = {
+    // ...
+    storageBucket: 'gs://gyneca-82aac.appspot.com',
+    name: 'gyneca',
+    projectId: 'gyneca-82aac'
+  };
+  
+  // Initialize Firebase
+  const firebase = initializeApp(firebaseConfig);
+  // Initialize Cloud Storage and get a reference to the service
+  // const storage = firebase.storage();
+  const storage = getStorage(firebase, 'gs://gyneca-82aac.appspot.com');
+  
+  // Create a storage reference from our storage service
+  var storageRef = ref(storage, "/");
+  
+  // Create a child reference
+  var journalsRef = _getChild(storageRef, 'journals');
+  // imagesRef now points to 'images'
+  
+  var journal_paths = {
+    "fall2022":["Fall2022/Volume 1 Issue 1.pdf","Volume 1 Issue 1"],
+    "spring2023":["Spring2023/Gyneca Spring 2023.pdf", "Volume 2 Issue 1"]
+  }
+
+  document.querySelector("#fall2022").addEventListener('click', loadJournal("fall2022"));
+  document.querySelector("#spring2023").addEventListener('click', loadJournal("spring2023"));
+
+  // Child references can also take paths delimited by '/'
+  var mastheadRef = _getChild(storageRef, 'images/masthead');
+  // spaceRef now points to "images/space.jpg"
+  // imagesRef still points to "images"
+  function loadJournal(journal) {
+    let this_journal_path = journal_paths[journal][0]
+    getDownloadURL(_getChild(journalsRef, this_journal_path))
+    .then((url) => {
+      // `url` is the download URL for 'images/stars.jpg'
+  
+      // This can be downloaded directly:
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = (event) => {
+        var blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+
+      console.log(url)
+      // Or inserted into an <img> element
+      var img = document.getElementById('fall2022journal');
+      img.setAttribute('src', url);
+      console.log("hello")
+
+      document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+    })
+    .catch((error) => {
+      // Handle any errors
+    });
+  } 
+    </script>
+
 </head>
 
 <body class="no-sidebar is-preload">
@@ -59,7 +133,17 @@
           <a href="faq.html">FAQs</a>
         </div>
       </div>
-      <a class="active" style="background-color: #f4f4f4; color: #523636;" href="journal.html">Journal</a>
+      <div class="dropdown">
+        <a class="active dropbtn" style="background-color: #f4f4f4; color: #523636;" href="journal.html">Journal</a>
+        <div class="dropdown-content">
+          <a href="journal.html" id="fall2022">
+            Fall 2022 Issue
+          </a>
+          <a href="journal.html" id="spring2023">
+            Spring 2023 Issue
+          </a>
+        </div>
+      </div>
       <div onclick="" class="dropdown">
         <a class="dropbtn" href="submissions.html">Submissions</a>
         <div class="dropdown-content">
@@ -116,7 +200,7 @@
 
    
     <br>
-    <h1 style="text-align: center;color: #922E22;font-size: 30px;">Volume 1 Issue 1</h1>
+    <h1 style="text-align: center;color: #922E22;font-size: 30px;" id="journal-title">Volume 1 Issue 1</h1>
     <br>
     <div class="container" style="text-align:center;">
         <!-- <iframe src="https://player.flipsnack.com?hash=QzdBOUM4RUVGQjUrdGNzZHF3NDhhNg==" 
@@ -199,68 +283,6 @@
   <script src="assets/js/slideshow.js"></script>
   <script src="assets/js/dynamicnav.js"></script>
   <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-  <script type="module">
-    import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
-
-    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
-
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
-    import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
-
-      // TODO: Replace the following with your app's Firebase project configuration
-  // See: https://firebase.google.com/docs/web/learn-more#config-object
-  const firebaseConfig = {
-    // ...
-    storageBucket: 'gs://gyneca-82aac.appspot.com',
-    name: 'gyneca',
-    projectId: 'gyneca-82aac'
-  };
   
-  // Initialize Firebase
-  const firebase = initializeApp(firebaseConfig);
-  // Initialize Cloud Storage and get a reference to the service
-  // const storage = firebase.storage();
-  const storage = getStorage(firebase, 'gs://gyneca-82aac.appspot.com');
-  
-  // Create a storage reference from our storage service
-  var storageRef = ref(storage, "/");
-  
-  // Create a child reference
-  var journalsRef = _getChild(storageRef, 'journals/Fall2022');
-  // imagesRef now points to 'images'
-  
-  
-  // Child references can also take paths delimited by '/'
-  var mastheadRef = _getChild(storageRef, 'images/masthead');
-  // spaceRef now points to "images/space.jpg"
-  // imagesRef still points to "images"
-  getDownloadURL(_getChild(journalsRef, "Volume 1 Issue 1.pdf"))
-    .then((url) => {
-      // `url` is the download URL for 'images/stars.jpg'
-  
-      // This can be downloaded directly:
-      var xhr = new XMLHttpRequest();
-      xhr.responseType = 'blob';
-      xhr.onload = (event) => {
-        var blob = xhr.response;
-      };
-      xhr.open('GET', url);
-      xhr.send();
-
-      console.log(url)
-      // Or inserted into an <img> element
-      var img = document.getElementById('fall2022journal');
-      img.setAttribute('src', url);
-      console.log("hello")
-
-    })
-    .catch((error) => {
-      // Handle any errors
-    });
-
-    </script>
-
 </body>
 </html>
