@@ -8,23 +8,24 @@
 
 <head>
   <title>GYNECA</title>
-  <link rel="icon" type="image/x-icon" href="images/logo_white.png">
+  <link rel="icon" type="image/x-icon" href="images/logo_white.png" />
   <meta charset="utf-8" />
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Columbia Undergraduate Journal of Gynecology and Women's Health">
-  <meta name="keywords" content="GYNECA, Columbia University, Women, Health, Journal, Scientific, Gynecology">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Columbia Undergraduate Journal of Gynecology and Women's Health" />
+  <meta name="keywords" content="GYNECA, Columbia University, Women, Health, Journal, Scientific, Gynecology" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="import" href="index.html"/>
 
   <script type="module">
     import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
 
-    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
+// If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
 
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
-    import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
+// Add Firebase products that you want to use
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
+import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
 
       // TODO: Replace the following with your app's Firebase project configuration
   // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -53,14 +54,33 @@
     "spring2023":["Spring2023/Gyneca Spring 2023.pdf", "Volume 2 Issue 1"]
   }
 
-  document.querySelector("#fall2022").addEventListener('click', loadJournal("fall2022"));
-  document.querySelector("#spring2023").addEventListener('click', loadJournal("spring2023"));
+  document.querySelector("#fall2022").addEventListener('click', loadFall2022);
+  document.querySelector("#spring2023").addEventListener('click', loadSpring2023);
+  document.querySelector("body").onload = () => {
+    event.preventDefault();
+    loadJournal("spring2023");
+  }
+
+  function loadFall2022(event) {
+    event.preventDefault();
+    loadJournal("fall2022");
+  }
+  function loadSpring2023(event) {
+    event.preventDefault();
+    loadJournal("spring2023");
+  }
+  // const page = window.open('index.html')
+  // page.document.querySelector(".journal-redirect").addEventListener('click', loadJournal("spring2023"))
+
+  // document.querySelector("link[rel=import]").import.querySelector(".journal-redirect").addEventListener('click', loadJournal("spring2023"))
 
   // Child references can also take paths delimited by '/'
   var mastheadRef = _getChild(storageRef, 'images/masthead');
   // spaceRef now points to "images/space.jpg"
   // imagesRef still points to "images"
+  
   function loadJournal(journal) {
+    console.log("heyyyy", journal)
     let this_journal_path = journal_paths[journal][0]
     getDownloadURL(_getChild(journalsRef, this_journal_path))
     .then((url) => {
@@ -86,7 +106,6 @@
         document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal"
         document.getElementById("journal-link").setAttribute("href", url)
         document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
-
       }
       else {
         var img = document.getElementById('fall2022journal');
@@ -100,17 +119,18 @@
       // Handle any errors
     });
   } 
-    </script>
 
-    <style>
-      @media screen and (max-width: 1000px) {
-        #fall2022journal {
-          width: none;
-          position:relative;
-          max-width:100%;
-        }
+  </script>
+
+  <style>
+    @media screen and (max-width: 1000px) {
+      #fall2022journal {
+        width: none;
+        position:relative;
+        max-width:100%;
       }
-    </style>
+    }
+  </style>
 
 </head>
 
