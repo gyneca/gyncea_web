@@ -83,12 +83,16 @@
 
       if (check === true) {
         document.getElementById(journal).setAttribute('href', url)
+        document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal"
+        document.getElementById("journal-link").setAttribute("href", url)
       }
-      var img = document.getElementById('fall2022journal');
-      img.setAttribute('src', url);
-      console.log("hello")
+      else {
+        var img = document.getElementById('fall2022journal');
+        img.setAttribute('src', url);
+        console.log("hello")
 
-      document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+        document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+      }
     })
     .catch((error) => {
       // Handle any errors
@@ -139,7 +143,7 @@
           <h1 id="mobile-title"><i>GYNECA</i></h1>
         </a>
       </div>
-      <a style="background-color: #f4f4f4; color: #523636;" href="index.html">Home</a>
+      <a style="background-color: #f4f4f4;" href="index.html">Home</a>
       <div onclick="" class="dropdown">
         <a class="dropbtn">About
           <!-- <i class="fa fa-caret-down"></i> -->
@@ -228,6 +232,7 @@
             frameBorder="0" 
             allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> 
         <a id="fall2022journal">Link to the PDF version of the Journal</a> -->
+        <a id="journal-link" rel="noopener noreferrer"></a>
         <iframe id="fall2022journal"
         height="1000px"
         width="100%"
