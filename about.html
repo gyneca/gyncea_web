@@ -14,6 +14,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
+    #infographics {
+      display: grid;
+      grid-template-columns: 33% 33% 33%; 
+      grid-gap: 5px; 
+      padding: 5px;
+      background-color: #922E22;
+    }
+
+    #why-women {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
     .grid-container-1 {
       display: grid;
       grid-template-columns: auto auto;
@@ -119,13 +134,11 @@
 
     .grid-item-text-3 {
       width: 100%;
-      padding-right: 110px;
     }
 
     .grid-item-text-3 p {
       font-family: Avenir;
       font-size: 20px;
-      text-align: right;
     }
 
     .infographic-items {
@@ -146,7 +159,7 @@
       }
 
       .grid-item-text p {
-        margin-right: 0;
+        /* margin-right: 0; */
         padding: 0;
         padding-top: 25px;
         text-align: center;
@@ -158,7 +171,8 @@
       }
 
       .grid-container-2 {
-        grid-template-columns: auto;
+        /* grid-template-columns: auto; */
+        margin-bottom: 30px;
       }
 
       .grid-container-2 .grid-item {
@@ -200,6 +214,15 @@
       .grid-container-3 p {
         text-align: center;
         font-size: 15px;
+      }
+    }
+
+    @media screen and (max-width: 813px) {
+      #why-women {
+        grid-template-columns: auto;
+      }
+      #infographics {
+        grid-template-columns: auto auto;
       }
     }
 
@@ -349,7 +372,7 @@
     </div>
 
     <div style="background-color: #F4F4F4;">
-      <div style="display: grid;grid-template-columns: 30% 70%;padding-top: 30px;padding-bottom: 30px;" class="container">
+      <div id="why-women" class="container">
         <h1 style="color:#922E22; font-size: 35px;width: 100%;">Women's Health Goes Beyond</h1>
         <p style="width:100%; font-family: Avenir;">“Medicine has inherited a troubling legacy of gaps and omissions 
             that it is trying to redress. But gender bias in medicine is not 
@@ -376,7 +399,7 @@
 
     <br>
     <div class="container">
-      <div style="display: grid;grid-template-columns: 33% 33% 33%; grid-gap: 5px; padding: 5px;background-color: #922E22;">
+      <div id="infographics">
         <div class="infographic-items">
           <img width="100%" src="images/10FDA-approved_img.png"/>
         </div>
