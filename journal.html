@@ -85,6 +85,8 @@
         document.getElementById(journal).setAttribute('href', url)
         document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal"
         document.getElementById("journal-link").setAttribute("href", url)
+        document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+
       }
       else {
         var img = document.getElementById('fall2022journal');
