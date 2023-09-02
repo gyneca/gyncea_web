@@ -46,6 +46,103 @@
     }
 
   </style>
+  <script type="module">
+    import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js'
+    import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js'
+
+          // TODO: Replace the following with your app's Firebase project configuration
+      // See: https://firebase.google.com/docs/web/learn-more#config-object
+      const firebaseConfig = {
+        // ...
+        storageBucket: 'gs://gyneca-82aac.appspot.com',
+        name: 'gyneca',
+        projectId: 'gyneca-82aac'
+      };
+      
+      // Initialize Firebase
+      const firebase = initializeApp(firebaseConfig);
+      // Initialize Cloud Storage and get a reference to the service
+      // const storage = firebase.storage();
+      const storage = getStorage(firebase, 'gs://gyneca-82aac.appspot.com');
+      
+      // Create a storage reference from our storage service
+      var storageRef = ref(storage, "/");
+      
+      // Create a child reference
+      var documentsRef = _getChild(storageRef, 'documents');
+      // imagesRef now points to 'images'
+      
+
+      getDownloadURL(_getChild(documentsRef, "permission_letter.pdf"))
+      .then((url) => {
+        // `url` is the download URL for 'images/stars.jpg'
+
+        // This can be downloaded directly:
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = (event) => {
+          var blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+
+        // Or inserted into an <img> element
+        var a1 = document.getElementById('a1');
+        a1.setAttribute('href', url);
+      })
+      .catch((error) => {
+        // Handle any errors
+      });
+
+      getDownloadURL(_getChild(documentsRef, "FORM FOR PRINCIPAL INVESTIGATOR_SUPERVISOR.pdf"))
+      .then((url) => {
+        // `url` is the download URL for 'images/stars.jpg'
+
+        // This can be downloaded directly:
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = (event) => {
+          var blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+
+        // Or inserted into an <img> element
+        var a1 = document.getElementById('a2');
+        a1.setAttribute('href', url);
+      })
+      .catch((error) => {
+        // Handle any errors
+      });
+
+      getDownloadURL(_getChild(documentsRef, "Gyneca Author Agreement.pdf"))
+      .then((url) => {
+        // `url` is the download URL for 'images/stars.jpg'
+
+        // This can be downloaded directly:
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = (event) => {
+          var blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+
+        // Or inserted into an <img> element
+        var a1 = document.getElementById('a3');
+        a1.setAttribute('href', url);
+      })
+      .catch((error) => {
+        // Handle any errors
+      });
+
+  </script>
 </head>
 
 <body class="no-sidebar is-preload">
@@ -125,7 +222,7 @@
       </div>
       <a href="blog.html">Blog</a>
       <div onclick="" class="dropdown">
-        <a class="dropbtn">Join
+        <a class="dropbtn">Join Us
           <!-- <i class="fa fa-caret-down"></i> -->
         </a>
         <div class="dropdown-content">
@@ -135,6 +232,9 @@
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeBW4qof0KZGf59nuzjD7hSAWiOJG52rb0cwASlXCa-cNP1ng/viewform">
             Become a Peer Reviewer<br>(Undergraduate)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/1ivKmzhebZREDFSxlQTz23_3vFyzL6PQJW_TOwnIzZ1o/viewform">
+            General Body and<br>E-Board Applications
           </a>
           <!--for applications sub tabs-->
           <!-- <div class="sub-dropdown">
@@ -242,11 +342,18 @@
                 prior to submitting.  
             </li>
         </h3>
+        <br>
+
+        <h2>Additional Forms</h2>
+        <a target="_blank" rel="noopener noreferrer" id="a1" style="color:#922e22">PERMISSION LETTER TO REUSE PREVIOUSLY PUBLISHED MATERIAL</a><br>
+        <a target="_blank" rel="noopener noreferrer" id="a2" style="color:#922e22">FORM FOR PRINCIPAL INVESTIGATOR SUPERVISOR</a><br>
+        <a target="_blank" rel="noopener noreferrer" id="a3" style="color:#922e22">GYNECA AUTHOR AGREEMENT</a><br>
 
         <br>
         <h2>How to Submit</h2>
         <h3>Please submit your manuscript via this <a style="color:#922e22;" href="https://docs.google.com/forms/d/e/1FAIpQLSflgw_kc5cxVIwWN26WwDEArTBFDL3MhJRBdPtc20KY7KRAYw/viewform">google form.</a></h3>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflgw_kc5cxVIwWN26WwDEArTBFDL3MhJRBdPtc20KY7KRAYw/viewform?embedded=true" style="justify-content: center;" margin="auto" width="100%"  height="850px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      
       
         <br>
       </div>
