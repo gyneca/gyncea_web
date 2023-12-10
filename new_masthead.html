@@ -1,0 +1,805 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Masthead</title>
+  <link rel="icon" type="image/x-icon" href="images/logo_white.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .grid-container-eb-head {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .grid-container-eb-head p {
+      width: 450px;
+      font-size: 17px;
+      margin: auto;
+      text-align: justify;
+    }
+
+    .grid-container-eb-head h3,
+    .grid-container-eb-head h4 {
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .grid-container-com {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .grid-container-com img {
+      border-radius: 50%;
+    }
+
+    .grid-container-com h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .grid-container-com h5 {
+      font-family: Avenir;
+    }
+
+    .grid-item {
+      padding: 15px;
+    }
+
+    .mh-heading-wrapper {
+      width: 100%;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .mh-heading-wrapper h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+    }
+
+    .eb-bio {
+      font-family: Avenir;
+    }
+
+    @media screen and (max-width: 1131px) {
+      .grid-container-eb-head {
+        grid-template-columns: auto;
+      }
+
+      .grid-container-com {
+        grid-template-columns: auto auto auto;
+      }
+
+    }
+
+    @media screen and (max-width: 813px) {
+      .grid-container-com {
+        grid-template-columns: auto auto;
+      }
+
+      .mh-heading-wrapper {
+        height: 100px;
+      }
+
+      .mh-heading-wrapper h2 {
+        font-size: 40px;
+      }
+    }
+
+    @media screen and (max-width: 564px) {
+
+      .grid-container-eb-head .grid-item img,
+      .grid-container-eb-head p {
+        width: 300px;
+      }
+
+      .grid-container-eb-head p {
+        font-size: 13px;
+      }
+
+      .grid-container-com img {
+        width: 150px;
+      }
+
+      .grid-container-com h4 {
+        font-size: 17px;
+      }
+
+      .grid-container-com h5 {
+        font-size: 13px;
+      }
+
+      .mh-heading-wrapper h2 {
+        font-size: 30px;
+      }
+
+      .fac h3 {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div class="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Hero -->
+        <section style="height: 120px;" id="hero" class="nav-logo-alt">
+          <!-- <img src="images/logo_white.png" /> -->
+          <div style="position: absolute;">
+            <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
+              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;" /></a>
+              <div id="gyneca-title-container">
+                <h1 id="gyneca-title"><i>GYNECA</i></h1>
+              </div>
+            </div>
+            <div class="tagline" style="clear:both;">
+              <h1 id="gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <nav class="topnav" id="nav">
+      <div id="mobile-title-icon">
+        <a href="index.html">
+          <img src="images/transparent_logo.png">
+          <h1 id="mobile-title"><i>GYNECA</i></h1>
+        </a>
+      </div>
+      <a href="index.html">Home</a>
+      <div onclick="" class="dropdown">
+        <a class="active" style="background-color: #f4f4f4; color: #523636;" class="dropbtn">About
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="masthead.html">Masthead</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div onclick="" class="dropdown">
+        <a class="active" class="dropbtn"  href="journal.html">Journal</a>
+        <div class="dropdown-content">
+          <a href="journal/fall2022.html" id="fall2022">
+            Fall 2022 Issue
+          </a>
+          <a href="journal/spring2023.html" id="spring2023">
+            Spring 2023 Issue
+          </a>
+        </div>
+      </div>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn" href="submissions.html">Submissions</a>
+        <div class="dropdown-content">
+          <a href="original-research-submissions.html">
+            Original Research<br>Submissions
+          </a>
+          <a href="external-submissions.html">
+            External Submissions<br>(Columbia)
+          </a>
+        </div>
+      </div>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn">Guidelines</a>
+        <div class="dropdown-content">
+          <a href="original-research-guidelines.html">
+            Guidelines for<br>Original Research
+          </a>
+          <a href="external-submission-guidelines.html">
+            Guidelines for External<br>Submissions (Columbia)
+          </a>
+        </div>
+      </div>
+      <a href="blog.html">Blog</a>
+      <div onclick="" class="dropdown">
+        <a class="dropbtn">Join Us
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="dropdown-content">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBBO8ZJxb9Ot66T8SCG0o9c6VLm7boX972YnsDpHP70yyRcA/viewform">
+            Become a Peer Reviewer
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeBW4qof0KZGf59nuzjD7hSAWiOJG52rb0cwASlXCa-cNP1ng/viewform">
+            Become a Peer Reviewer<br>(Undergraduate)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/1ivKmzhebZREDFSxlQTz23_3vFyzL6PQJW_TOwnIzZ1o/viewform">
+            General Body and<br>E-Board Applications
+          </a>
+          <!--for applications sub tabs-->
+          <!-- <div class="sub-dropdown">
+            <a target="_blank" rel="noopener noreferrer" href="join.html">
+              Applications
+            </a>
+            <div class="dropdown-sub-content">
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScW3vF2phvlgMGCjOH5SKLlmH9v33OAKaU8aUGzDl5vfVVBQg/viewform">
+                For Current Gyneca members
+              </a>
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSceTQFuij4Uxf1vYf7Hpt7f3rm48KXCgWQ5_0str0r_toEwqw/viewform">
+                For External applicants
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="myFunction()">&#9776;</a>
+    </nav>
+
+    <!-- Main -->
+    <div class="wrapper">
+      <div class="container" id="main">
+
+        <!-- Content -->
+        <div class="mh-heading-wrapper first">
+          <h2>Managing Team</h2>
+        </div>
+        <div class="grid-container-eb-head">
+          <div class="grid-item">
+            <img src="images/ananya-raghavan.heic">
+            <h3>Ananya Raghavan</h3>
+            <h4>Co-Editor in chief</h4>
+            <p class="eb-bio">Ananya Raghavan is a junior in Columbia University's School of Engineering and Applied
+              Science (SEAS). She is majoring in biomedical engineering and worked in the Carol Prives Lab as a Summer
+              Undergraduate Research Fellow (SURF). She is very excited to be a part of GYNECA and is overseeing the
+              journalism, editing, and national submission committees. In her free time, she loves running, painting,
+              and playing with her goldendoodle, Copper. On most Sundays she's usually watching a feminist, thriller, or
+              romantic Bollywood movie.</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/nicole-greco.jpg">
+            <h3>Nicole Greco</h3>
+            <h4>Co-Editor in chief</h4>
+            <p class="eb-bio">Nicole Greco is a senior at Columbia College majoring in Chemistry. She is a medical
+              assistant at the Columbia University Fertility Center, part of the Columbia Startup Lab organization,
+              and is working on Outreach in the Columbia SPLASH organization. She oversees art, outreach,
+              social media  and layout at GYNECA. She is an aspiring gynecologist and this journal embodies her goal
+              to spread awareness about reproductive health. At GYNECA, she strives to honor the work of undergraduate
+              students at Columbia University, as well as encourage dialogue about the shifting dynamics in this healthcare field.
+              She is looking forward to creating a tightly knit community at GYNECA that strives to give a voice to gender minorities in medicine. </p>
+          </div>
+          <div class="grid-item">
+            <img src="images/jonathan-bryson-harvey.png">
+            <h3>Jonathan Bryson-Harvey</h3>
+            <h4>Co-Managing Editor</h4>
+            <p class="eb-bio">Jonathan Bryson-Harvey is a sophomore at Columbia College considering a major in Economics with a
+              Public Health concentration! Over the summer, he worked as a pharmacy technician, filling prescriptions and
+              seeing firsthand the disparities in adequate healthcare and the financial toll that buying life-saving
+              medications can take on families. He also completed my Emergency Medical Technician training at a local
+              community college. He's very interested in healthcare equity and thinks that starts with equal access to
+              health education and information, which is often neglected when it comes to women and other gender
+              minorities.</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/claire_l.png">
+            <h3>Claire Looney</h3>
+            <h4>Co-Managing Editor</h4>
+            <p class="eb-bio"> </p>
+          </div>
+          <div class="grid-item">
+            <img src="images/larissa-iraj.jpg">
+            <h3>Larissa Iraj</h3>
+            <h4>Secretary</h4>
+            <p class="eb-bio">Larissa is a junior at Barnard College majoring in Neuroscience and Behavior and minoring in Science and Public Policy. 
+              Her experiences as a volunteer in a community health center and as a shadow for an OBGYN allowed her to see the inequities in health that
+              many women face and motivated her to be a voice for other women through journalism. Larissa is also involved in neuroscience research at 
+              the New York State Psychiatric Institute where she studies the effects of early life stress on the neural circuits involved in depression. 
+              She became part of GYNECA in hopes of raising awareness and initiating conversation about trending issues relating to women’s health. </p>
+          </div>
+          <div class="grid-item">
+            <img src="images/rahul-mullick.jpg">
+            <h3>Rahul Mullick</h3>
+            <h4>Treasurer</h4>
+            <p class="eb-bio">Rahul Mullick is a senior at Columbia College studying Biology. After witnessing systemic inequities 
+              in educational awareness and resources for women's healthcare through his clinical experiences, he was inspired to join Gyneca. 
+              Through Gyneca, he has grown as an advocate for women's health and has learned valuable lessons about persistence, leadership, 
+              and how access to resources can improve health outcomes. Rahul hopes to continue to grow as a women’s health advocate and leader through 
+              his tenure as treasurer for Gyneca. </p>
+          </div>
+        </div>
+
+        <div class="mh-heading-wrapper">
+          <h2>Editorial Board</h2>
+        </div>
+        <div class="grid-container-com">
+          <div class="grid-item">
+            <img src="images/erin-ahern.heic">
+            <h4>Erin Ahern</h4>
+            <h5>Head of Journalism </h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/NoelleTexeira.png">
+            <h4>Noelle Texeira</h4>
+            <h5>Senior Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/naomi-lebowitz.png">
+            <h4>Naomi Lebowitz<h4>
+                <h5>Senior Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/hannah-ramsey.heic">
+            <h4>Hannah Ramsey<h4>
+                <h5>Senior Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/anatta-sirimia-tantiwongse.jpeg">
+            <h4>Anatta Tantiwongse</h4>
+            <h5>Head of Layout</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/qinyang-meng.jpeg">
+            <h4>Qingyang Meng</h4>
+            <h5>Head of Art</h5>
+          </div>
+        </div>
+
+
+        <div class="mh-heading-wrapper">
+          <h2>Executive Board</h2>
+        </div>
+        <div class="grid-container-com">
+          <div class="grid-item">
+            <img src="images/misha-bhatia.jpeg">
+            <h4>Misha Bhatia</h4>
+            <h5>Co-Director of Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/lucia-ruggiero.jpeg">
+            <h4>Lucia Ruggiero</h4>
+            <h5>Co-Director of Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/montaha-rahman.jpg">
+            <h4>Montaha Rahman</h4>
+            <h5>Co-Director of National Submissions</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/raine-monet-sade-williams.png">
+            <h4>Raine-Monet Williams</h4>
+            <h5>Co-Director of National Submissions</h4>
+          </div>
+          <div class="grid-item">
+            <img src="images/jessie-huang.png">
+            <h4>Jessie Huang</h4>
+            <h5>Director of Web Development</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/allison-pak.jpg">
+            <h4>Allison Pak</h4>
+            <h5>Social Media Director</h5>
+          </div>
+        </div>
+
+        <div class="mh-heading-wrapper">
+          <h2>Committee Members</h2>
+        </div>
+        <div class="grid-container-com">
+          <div class="grid-item">
+            <img src="images/eve-spear.jpeg">
+            <h4>Eve Spear</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/jaia-wingard.png">
+            <h4>Jaia Wingard</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/neha-mehta.jpeg">
+            <h4>Neha Mehta</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/aleecia-mejia.jpg">
+            <h4>Aleecia Mejia</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/jules-rocha.png">
+            <h4>Jules Rocha</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/emi-gacaj.png">
+            <h4>Emi Gaçaj</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/Erin_Donahue.png">
+            <h4>Erin Donahue</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/anagha-rajesh.heic">
+            <h4>Anagha Rajesh</h4>
+            <h5>Outreach</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/aishwarya-rao.jpeg">
+            <h4>Aishwarya Rao</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/Ramya_Arumilli.png">
+            <h4>Ramya Arumilli</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/aidyn-levin.jpeg">
+            <h4>Aidyn Levin</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/kylie-kendrick.jpeg">
+            <h4>Kylie Kendrick</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/emily-che.jpg">
+            <h4>Emily Che</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/abbey-neer.jpeg">
+            <h4>Abbey Neer</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/sofia-cruz.jpeg">
+            <h4>Sofia Cruz</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/paige-mccullough.jpeg">
+            <h4>Paige McCullough</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <!--change-->
+            <img src="images/arya-adake.png">
+            <h4>Arya Adake</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/raine-monet-sade-williams.png">
+            <h4>Raine-Monet Williams</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/abigail-hall.png">
+            <h4>Abigail Hall</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> -->
+            <h4>Kate Falla</h4> <!-- no picture -->  
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/lizzy-carpenter.png">
+            <h4>Lizzy Carpenter</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/claire-nottman.png">
+            <h4>Claire Nottman</h4>
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/mayyada-shair.jpg"> 
+            <h4>Mayyada Shair</h4> 
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> -->
+            <h4>Tumi Anthony-Sawyerr</h4> <!-- no picture-->
+            <h5>Scientific Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/aditi.png">
+            <h4>Aditi Malhotra</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/hope-trygstad.png">
+            <h4>Hope Trygstad</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/hannah-hamerman.jpg">
+            <h4>Hannah Hamerman</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/harriet-engelke.jpeg">
+            <h4>Harriet Englke</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/gowri-konkesa.jpeg">
+            <h4>Gowri Konkesa</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/aya-kodmani.jpeg">
+            <h4>Aya Kodmani</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> -->
+            <h4>Anisa Thompson</h4> <!-- no photo -->
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/alexandra-khodorova.jpeg">
+            <h4>Alexandra Khodorova</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/ella-ryan.jpg">
+            <h4>Ella Ryan</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/nina-kulkarni.heic">
+            <h4>Nina Kulkarni</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> -->
+            <h4>Leyla Selman</h4> <!-- no photo -->
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/maddie-day.jpeg">
+            <h4>Maddie Day</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/nandini-lal.jpeg">
+            <h4>Nandini Lal</h4>
+            <h5>Journalist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/jenniffer-koita.jpg">
+            <h4>Jenniffer Koita</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/amna-jan.jpeg">
+            <h4>Amna Jan</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/maya-joseph.jpeg">
+            <h4>Maya Joseph</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/mia-raneri.jpeg">
+            <h4>Mia Raneri</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/olivia-theard.jpg">
+            <h4>Olivia Theard</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/tierani.png">
+            <h4>Tierani Green</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/sarah-gupta.jpeg">
+            <h4>Sarah Gupta</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/ariel-weinsaft.png">
+            <h4>Ariel Weinsaft</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/nicole-rosas.png">
+            <h4>Nicole Rosas</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/katherine-ahn.jpeg">
+            <h4>Katherine Ahn</h4>
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> -->
+            <h4>Malaika Mirza</h4> <!-- no photo -->
+            <h5>Revision Editor</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/zeena-mohamed.jpg">
+            <h4>Zeena Mohamed</h4>
+            <h5>Website Development</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/carrie-crespino.jpeg">
+            <h4>Carrie Crespino</h4>
+            <h5>Layout</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> --> 
+            <h4>Jacqueline Subkhanberdina</h4> <!-- no photo -->
+            <h5>Layout</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> --> 
+            <h4>Lara Sahinoglu</h4> <!-- no photo -->
+            <h5>Social Media</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/janya-utkarsh.jpeg">
+            <h4>Janya Utkarsh</h4>
+            <h5>Social Media</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/malak-bkhiet.heic">
+            <h4>Malak Bkhiet</h4>
+            <h5>Social Media</h5>
+          </div>
+          <div class="grid-item">
+            <!-- <img src="images/"> --> 
+            <h4>Joanna Lin</h4> <!-- no photo -->
+            <h5>Artist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/joyce-wang.jpeg">
+            <h4>Joyce Wang</h4>
+            <h5>Artist</h5>
+          </div>
+          <div class="grid-item">
+            <img src="images/samantha-petrucco.jpeg">
+            <h4>Samantha Petrucco</h4>
+            <h5>Artist</h5>
+          </div>
+          <!-- <div class="grid-item">
+            <img src="">
+            <h4></h4> 
+            <p></p>
+          </div>
+          <div class="grid-item">
+            <img src="">
+            <h4></h4> 
+            <p></p>
+          </div>
+          <div class="grid-item">
+            <img src="">
+            <h4></h4> 
+            <p></p>
+          </div>
+          <div class="grid-item">
+            <img src="">
+            <h4></h4> 
+            <p></p>
+          </div> -->
+        </div>
+
+        <!-- <article id="content">
+            <h3>Morgan Firestein, Ph.D.</h3>
+            <p>Postdoctoral Research Fellow<br>
+            Department of Psychiatry, Division of Developmental Neuroscience <br>
+            Columbia University Medical Center/New York State Psychiatric Institute</p>
+        </article> -->
+
+        <div class="mh-heading-wrapper">
+          <h2>Faculty and Graduate Advisors</h2>
+        </div>
+        <div class="grid-container-com">
+          <div class="grid-item fac">
+            <img src="images/drhutcherson.png">
+            <h4>Dr. Hilda Hutcherson, MD</h4>
+            <h5>Professor of Obstetrics & Gynecology at Columbia University Medical Center</h5>
+          </div>
+          <div class="grid-item fac">
+            <img src="images/drfirestein.jpeg">
+            <h4>Morgan Firestein, Ph.D.</h4>
+            <h5>Postdoctoral Research Fellow</h5>
+            <h5>Department of Psychiatry, Division of Developmental Neuroscience
+              Columbia University Medical Center/New York State Psychiatric Institute</h5>
+          </div>
+          <div class="grid-item fac">
+            <img src="images/Talha-Siddiqui.png">
+            <h4>Dr. Talha Siddiqui, Ph.D</h4>
+            <h5>Lecturer in the Discipline of Chemistry</h5>
+            <h5>Department of Chemistry, Columbia University</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div id="f">
+      <div id="f-content">
+        <div id="f-icon-title">
+          <img src="images/transparent_logo.png">
+          <h1>GYNECA</h1>
+        </div>
+        <div id="f-sm">
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer"
+                href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+          </ul>
+          <ul class="icons footer-ul">
+            <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer"
+                href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer-for-fullscreen">
+        <div style="width: 50%; float: left;">
+          <div id="gyneca-title-icon-container" style="justify-content: left;padding-right: 25%;">
+            <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left; margin-right: 13px" /></a>
+            <h1>GYNECA</h1>
+            <div style="clear:both; ">
+              <h2 id="f-gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h2>
+            </div>
+            <div id="f-sm">
+              <ul class="icons footer-ul">
+                <li class="fa fa-envelope">&nbsp;&nbsp;&nbsp;<a style="text-decoration: none; font-weight: bold;" target="_blank" rel="noopener noreferrer"
+                    href="mailto: gyneca.columbia@gmail.com">gyneca.columbia@gmail.com</a></li>
+              </ul>
+              <ul class="icons footer-ul">
+                <li class="icon brands fa-facebook-f">&nbsp;&nbsp;&nbsp;<a style="text-decoration: none; font-weight: bold;" target="_blank" rel="noopener noreferrer"
+                    href="https://facebook.com/ColumbiaGyneca">facebook.com/ColumbiaGyneca</a></li>
+              </ul>
+              <ul class="icons footer-ul">
+                <li class="icon brands fa-instagram">&nbsp;&nbsp;&nbsp;<a style="text-decoration: none; font-weight: bold;" target="_blank" rel="noopener noreferrer"
+                    href="https://instagram.com/gyneca.columbia">instagram.com/gyneca.columbia</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-left: 50%;"> 
+          <div style="width: 100%; overflow: hidden;">
+            <h2 style="float:left;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="index.html">HOME</a><br><a href="masthead.html">Masthead</a><br><a href="faq.html">FAQS</a></h2>
+            <h2 style="margin-left: 50%;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="about.html">ABOUT</a><br><a href="blog.html">Blog</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dynamicnav.js"></script>
+</body>
+
+</html>
