@@ -8,14 +8,14 @@
 
 <head>
   <title>GYNECA</title>
-  <link rel="icon" type="image/x-icon" href="images/logo_white.png" />
+  <link rel="icon" type="image/x-icon" href="../images/logo_white.png" />
   <meta charset="utf-8" />
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Columbia Undergraduate Journal of Gynecology and Women's Health" />
   <meta name="keywords" content="GYNECA, Columbia University, Women, Health, Journal, Scientific, Gynecology" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="import" href="index.html"/>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="import" href="../index.html"/>
 
   <script type="module">
     import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js'
@@ -52,29 +52,9 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   var journal_paths = {
     "fall2022":["Fall2022/Volume 1 Issue 1.pdf","Volume 1 Issue 1"],
     "spring2023":["Spring2023/Gyneca Spring 2023.pdf", "Volume 2 Issue 1"],
-    "fall2023":["Fall2023/Gyneca Fall 2023.pdf", "Volume 3 Issue 1"]
+    "fall2023":["Fall2023/Gyneca Fall 2023.pdf", "Volume 2 Issue 2"]
   }
 
-  document.querySelector("#fall2022").addEventListener('click', loadFall2022);
-  document.querySelector("#spring2023").addEventListener('click', loadSpring2023);
-  document.querySelector("#fall2023").addEventListener('click', loadFall2023);
-  document.querySelector("body").onload = () => {
-    event.preventDefault();
-    loadJournal("fall2023");
-  }
-
-  function loadFall2022(event) {
-    event.preventDefault();
-    loadJournal("fall2022");
-  }
-  function loadSpring2023(event) {
-    event.preventDefault();
-    loadJournal("spring2023");
-  }
-  function loadFall2023(event) {
-    event.preventDefault();
-    loadJournal("fall2023");
-  }
   // const page = window.open('index.html')
   // page.document.querySelector(".journal-redirect").addEventListener('click', loadJournal("spring2023"))
 
@@ -84,9 +64,9 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   var mastheadRef = _getChild(storageRef, 'images/masthead');
   // spaceRef now points to "images/space.jpg"
   // imagesRef still points to "images"
-  
-  function loadJournal(journal) {
-    let this_journal_path = journal_paths[journal][0]
+
+  function loadJournal() {
+    let this_journal_path = journal_paths["fall2023"][0]
     getDownloadURL(_getChild(journalsRef, this_journal_path))
     .then((url) => {
       // `url` is the download URL for 'images/stars.jpg'
@@ -110,20 +90,20 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
         document.getElementById(journal).setAttribute('href', url)
         document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal"
         document.getElementById("journal-link").setAttribute("href", url)
-        document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
       }
       else {
         var img = document.getElementById('fall2022journal');
         img.setAttribute('src', url);
-        console.log("hello")
 
-        document.getElementById("journal-title").innerHTML = journal_paths[journal][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
       }
     })
     .catch((error) => {
       // Handle any errors
     });
   } 
+  loadJournal();
 
   </script>
 
@@ -151,7 +131,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
           <!-- <img src="images/logo_white.png" /> -->
           <div style="position: absolute;">
             <div id="gyneca-title-icon-container" style="display: flex; justify-content: center;">
-              <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left;" /></a>
+              <a href="../index.html"><img id="header-icon" src="../images/transparent_logo.png" style="float:left;" /></a>
               <div id="gyneca-title-container">
                 <h1 id="gyneca-title"><i>GYNECA</i></h1>
               </div>
@@ -165,20 +145,20 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
     </div>
     <nav class="topnav" id="nav">
       <div id="mobile-title-icon">
-        <a href="index.html">
-          <img src="images/transparent_logo.png">
+        <a href="../index.html">
+          <img src="../images/transparent_logo.png">
           <h1 id="mobile-title"><i>GYNECA</i></h1>
         </a>
       </div>
-      <a style="background-color: #f4f4f4;" href="index.html">Home</a>
+      <a style="background-color: #f4f4f4;" href="../index.html">Home</a>
       <div onclick="" class="dropdown">
         <a class="dropbtn">About
           <!-- <i class="fa fa-caret-down"></i> -->
         </a>
         <div class="dropdown-content">
-          <a href="about.html">About</a>
-          <a href="masthead.html">Masthead</a>
-          <a href="faq.html">FAQs</a>
+          <a href="../about.html">About</a>
+          <a href="../masthead.html">Masthead</a>
+          <a href="../faq.html">FAQs</a>
         </div>
       </div>
       <div class="dropdown">
@@ -196,12 +176,12 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
         </div>
       </div>
       <div onclick="" class="dropdown">
-        <a class="dropbtn" href="submissions.html">Submissions</a>
+        <a class="dropbtn" href="../submissions.html">Submissions</a>
         <div class="dropdown-content">
-          <a href="original-research-submissions.html">
+          <a href="../original-research-submissions.html">
             Original Research<br>Submissions
           </a>
-          <a href="external-submissions.html">
+          <a href="../external-submissions.html">
             External Submissions<br>(Columbia)
           </a>
         </div>
@@ -209,17 +189,17 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
       <div onclick="" class="dropdown">
         <a class="dropbtn">Guidelines</a>
         <div class="dropdown-content">
-          <a href="original-research-guidelines.html">
+          <a href="../original-research-guidelines.html">
             Guidelines for<br>Original Research
           </a>
-          <a href="external-submission-guidelines.html">
+          <a href="../external-submission-guidelines.html">
             Guidelines for External<br>Submissions (Columbia)
           </a>
         </div>
       </div>
-      <a href="blog.html">Blog</a>
+      <a href="../blog.html">Blog</a>
       <div onclick="" class="dropdown">
-        <a class="dropbtn">Join
+        <a class="dropbtn">Join Us
           <!-- <i class="fa fa-caret-down"></i> -->
         </a>
         <div class="dropdown-content">
@@ -229,6 +209,9 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeBW4qof0KZGf59nuzjD7hSAWiOJG52rb0cwASlXCa-cNP1ng/viewform">
             Become a Peer Reviewer<br>(Undergraduate)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/1ivKmzhebZREDFSxlQTz23_3vFyzL6PQJW_TOwnIzZ1o/viewform">
+            General Body and<br>E-Board Applications
           </a>
           <!--for applications sub tabs-->
           <!-- <div class="sub-dropdown">
@@ -276,7 +259,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
     <div id="f">
       <div id="f-content">
         <div id="f-icon-title">
-          <img src="images/transparent_logo.png">
+          <img src="../images/transparent_logo.png">
           <h1>GYNECA</h1>
         </div>
         <div id="f-sm">
@@ -294,7 +277,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
       <div id="footer-for-fullscreen">
         <div style="width: 50%; float: left;">
           <div id="gyneca-title-icon-container" style="justify-content: left;padding-right: 25%;">
-            <a href="index.html"><img id="header-icon" src="images/transparent_logo.png" style="float:left; margin-right: 13px" /></a>
+            <a href="../index.html"><img id="header-icon" src="../images/transparent_logo.png" style="float:left; margin-right: 13px" /></a>
             <h1>GYNECA</h1>
             <div style="clear:both; ">
               <h2 id="f-gyneca-subtitle">Columbia Undergraduate Journal of Gynecology and Women's Health</h2>
@@ -317,8 +300,8 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
         </div>
         <div style="margin-left: 50%;"> 
           <div style="width: 100%; overflow: hidden;">
-            <h2 style="float:left;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="index.html">HOME</a><br><a href="masthead.html">Masthead</a><br><a href="faq.html">FAQS</a></h2>
-            <h2 style="margin-left: 50%;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="about.html">ABOUT</a><br><a href="blog.html">Blog</a></h2>
+            <h2 style="float:left;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="../index.html">HOME</a><br><a href="../masthead.html">Masthead</a><br><a href="../faq.html">FAQS</a></h2>
+            <h2 style="margin-left: 50%;color:#922E22;font-family: Avenir;font-size: 20px;line-height: 3em;"><a href="../about.html">ABOUT</a><br><a href="../blog.html">Blog</a></h2>
           </div>
         </div>
       </div>
@@ -327,14 +310,14 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.dropotron.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/slideshow.js"></script>
-  <script src="assets/js/dynamicnav.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.dropotron.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/slideshow.js"></script>
+  <script src="../assets/js/dynamicnav.js"></script>
   <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
   
 </body>
