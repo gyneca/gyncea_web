@@ -87,13 +87,13 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
       console.log(check)
 
       if (check === true) {
-        document.getElementById(journal).setAttribute('href', url)
-        document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal"
+        document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal";
         document.getElementById("journal-link").setAttribute("href", url)
         document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
       }
       else {
-        var img = document.getElementById('fall2022journal');
+        console.log("here1");
+        var img = document.getElementById('fall2023journal');
         img.setAttribute('src', url);
 
         document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
@@ -109,7 +109,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
 
   <style>
     @media screen and (max-width: 1000px) {
-      #fall2022journal {
+      #fall2023journal {
         width: none;
         position:relative;
         max-width:100%;
