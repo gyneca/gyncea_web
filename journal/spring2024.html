@@ -52,7 +52,8 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   var journal_paths = {
     "fall2022":["Fall2022/Volume 1 Issue 1.pdf","Volume 1 Issue 1"],
     "spring2023":["Spring2023/Gyneca Spring 2023.pdf", "Volume 2 Issue 1"],
-    "fall2023":["Fall2023/Gyneca Fall 2023.pdf", "Volume 2 Issue 2"]
+    "fall2023":["Fall2023/Gyneca Fall 2023.pdf", "Volume 2 Issue 2"],
+    "spring2024":["Spring2024/Gyneca Spring 2024.pdf", "Volume 3 Issue 1"]
   }
 
   // const page = window.open('index.html')
@@ -66,7 +67,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   // imagesRef still points to "images"
 
   function loadJournal() {
-    let this_journal_path = journal_paths["fall2023"][0]
+    let this_journal_path = journal_paths["spring2024"][0]
     getDownloadURL(_getChild(journalsRef, this_journal_path))
     .then((url) => {
       // `url` is the download URL for 'images/stars.jpg'
@@ -89,14 +90,14 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
       if (check === true) {
         document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal";
         document.getElementById("journal-link").setAttribute("href", url)
-        document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["spring2024"][1]
       }
       else {
         console.log("here1");
-        var img = document.getElementById('fall2023journal');
+        var img = document.getElementById('spring2024journal');
         img.setAttribute('src', url);
 
-        document.getElementById("journal-title").innerHTML = journal_paths["fall2023"][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["spring2024"][1]
       }
     })
     .catch((error) => {
@@ -109,7 +110,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
 
   <style>
     @media screen and (max-width: 1000px) {
-      #fall2023journal {
+      #spring2024journal {
         width: none;
         position:relative;
         max-width:100%;
@@ -249,7 +250,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
             allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> 
         <a id="fall2022journal">Link to the PDF version of the Journal</a> -->
         <a id="journal-link" rel="noopener noreferrer"></a>
-        <iframe id="fall2023journal"
+        <iframe id="spring2024journal"
         height="1000px"
         width="100%"
         height="1000px"></iframe>
