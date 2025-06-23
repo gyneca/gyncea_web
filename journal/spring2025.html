@@ -54,6 +54,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
     "spring2023":["Spring2023/Gyneca Spring 2023.pdf", "Volume 2 Issue 1"],
     "fall2023":["Fall2023/Gyneca Fall 2023.pdf", "Volume 2 Issue 2"],
     "spring2024":["Spring2024/Gyneca Spring 2024.pdf", "Volume 3 Issue 1"],
+    "fall2024":["Fall2024/Gyneca Fall 2024.pdf", "Volume 3 Issue 2"],
     "spring2025":["Spring2025/Gyneca Spring 2025.pdf", "Volume 4 Issue 1"]
   }
 
@@ -91,14 +92,14 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
       if (check === true) {
         document.getElementById("journal-link").innerHTML = "Mobile Browser Version does not support iframe. Click link for Journal";
         document.getElementById("journal-link").setAttribute("href", url)
-        document.getElementById("journal-title").innerHTML = journal_paths["spring2024"][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["spring2025"][1]
       }
       else {
         console.log("here1");
-        var img = document.getElementById('spring2024journal');
+        var img = document.getElementById('spring2025journal');
         img.setAttribute('src', url);
 
-        document.getElementById("journal-title").innerHTML = journal_paths["spring2024"][1]
+        document.getElementById("journal-title").innerHTML = journal_paths["spring2025"][1]
       }
     })
     .catch((error) => {
@@ -111,7 +112,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
 
   <style>
     @media screen and (max-width: 1000px) {
-      #spring2024journal {
+      #spring2025journal {
         width: none;
         position:relative;
         max-width:100%;
