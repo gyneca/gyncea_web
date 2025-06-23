@@ -68,7 +68,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
   // imagesRef still points to "images"
 
   function loadJournal() {
-    let this_journal_path = journal_paths["spring2024"][0]
+    let this_journal_path = journal_paths["spring2025"][0]
     getDownloadURL(_getChild(journalsRef, this_journal_path))
     .then((url) => {
       // `url` is the download URL for 'images/stars.jpg'
@@ -181,6 +181,9 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
           <a href="fall2024.html" id="fall2024">
             Fall 2024 Issue
           </a>
+          <a href="spring2025.html" id="fall2024">
+            Spring 2025 Issue
+          </a>
         </div>
       </div>
       <div onclick="" class="dropdown">
@@ -254,7 +257,7 @@ import { ref, getStorage, _getChild, getDownloadURL, getBlob } from 'https://www
             allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> 
         <a id="fall2022journal">Link to the PDF version of the Journal</a> -->
         <a id="journal-link" rel="noopener noreferrer"></a>
-        <iframe id="spring2024journal"
+        <iframe id="spring2025journal"
         height="1000px"
         width="100%"
         height="1000px"></iframe>
